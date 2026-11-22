@@ -1,250 +1,255 @@
 {
- "note": "All malls already used or reserved. Never pick one of these again. Append every new mall here.",
- "malls": [
-  {
-   "name": "Westfield Chodov",
-   "city": "Prague",
-   "country": "Czechia"
-  },
-  {
-   "name": "Hirsch Center",
-   "city": "Aachen",
-   "country": "Germany"
-  },
-  {
-   "name": "Magna Plaza",
-   "city": "Amsterdam",
-   "country": "Netherlands"
-  },
-  {
-   "name": "Nelson Mandela Square",
-   "city": "Johannesburg",
-   "country": "South Africa"
-  },
-  {
-   "name": "Kö-Galerie",
-   "city": "Düsseldorf",
-   "country": "Germany"
-  },
-  {
-   "name": "The Arcade",
-   "city": "Providence",
-   "country": "USA"
-  },
-  {
-   "name": "Galerías Pacífico",
-   "city": "Buenos Aires",
-   "country": "Argentina"
-  },
-  {
-   "name": "Galleria Vittorio Emanuele II",
-   "city": "Milan",
-   "country": "Italy"
-  },
-  {
-   "name": "Burlington Arcade",
-   "city": "London",
-   "country": "UK"
-  },
-  {
-   "name": "Omotesando Hills",
-   "city": "Tokyo",
-   "country": "Japan"
-  },
-  {
-   "name": "Queen Victoria Building",
-   "city": "Sydney",
-   "country": "Australia"
-  },
-  {
-   "name": "Souk Madinat Jumeirah",
-   "city": "Dubai",
-   "country": "UAE"
-  },
-  {
-   "name": "Galerie Vivienne",
-   "city": "Paris",
-   "country": "France"
-  },
-  {
-   "name": "Siam Paragon",
-   "city": "Bangkok",
-   "country": "Thailand"
-  },
-  {
-   "name": "Mall of America",
-   "city": "Bloomington",
-   "country": "USA"
-  },
-  {
-   "name": "V&A Waterfront",
-   "city": "Cape Town",
-   "country": "South Africa"
-  },
-  {
-   "name": "Ginza Six",
-   "city": "Tokyo",
-   "country": "Japan"
-  },
-  {
-   "name": "Galleria Umberto I",
-   "city": "Naples",
-   "country": "Italy"
-  },
-  {
-   "name": "Shopping Iguatemi",
-   "city": "São Paulo",
-   "country": "Brazil"
-  },
-  {
-   "name": "Mall of the Emirates",
-   "city": "Dubai",
-   "country": "UAE"
-  },
-  {
-   "name": "Powerscourt Townhouse Centre",
-   "city": "Dublin",
-   "country": "Ireland"
-  },
-  {
-   "name": "The Shoppes at Marina Bay Sands",
-   "city": "Singapore",
-   "country": "Singapore"
-  },
-  {
-   "name": "Mädler-Passage",
-   "city": "Leipzig",
-   "country": "Germany"
-  },
-  {
-   "name": "CF Toronto Eaton Centre",
-   "city": "Toronto",
-   "country": "Canada"
-  },
-  {
-   "name": "Costanera Center",
-   "city": "Santiago",
-   "country": "Chile"
-  },
-  {
-   "name": "Grand Bazaar",
-   "city": "Istanbul",
-   "country": "Turkey"
-  },
-  {
-   "name": "Chadstone",
-   "city": "Melbourne",
-   "country": "Australia"
-  },
-  {
-   "name": "Mall of Egypt",
-   "city": "Cairo",
-   "country": "Egypt"
-  },
-  {
-   "name": "Taikoo Li Sanlitun",
-   "city": "Beijing",
-   "country": "China"
-  },
-  {
-   "name": "Galeries Royales Saint-Hubert",
-   "city": "Brussels",
-   "country": "Belgium"
-  },
-  {
-   "name": "The Grove",
-   "city": "Los Angeles",
-   "country": "USA"
-  },
-  {
-   "name": "Starfield COEX Mall",
-   "city": "Seoul",
-   "country": "South Korea"
-  },
-  {
-   "name": "Westfield London",
-   "city": "London",
-   "country": "UK"
-  },
-  {
-   "name": "Mall of Africa",
-   "city": "Midrand",
-   "country": "South Africa"
-  },
-  {
-   "name": "Morocco Mall",
-   "city": "Casablanca",
-   "country": "Morocco"
-  },
-  {
-   "name": "Packages Mall",
-   "city": "Lahore",
-   "country": "Pakistan"
-  },
-  {
-   "name": "Field's",
-   "city": "Copenhagen",
-   "country": "Denmark"
-  },
-  {
-   "name": "Larcomar",
-   "city": "Lima",
-   "country": "Peru"
-  },
-  {
-   "name": "Manufaktura",
-   "city": "Łódź",
-   "country": "Poland"
-  },
-  {
-   "name": "Two Rivers Mall",
-   "city": "Nairobi",
-   "country": "Kenya"
-  },
-  {
-   "name": "GUM",
-   "city": "Moscow",
-   "country": "Russia"
-  },
-  {
-   "name": "Dubai Mall",
-   "city": "Dubai",
-   "country": "UAE"
-  },
-  {
-   "name": "Westfield Forum des Halles",
-   "city": "Paris",
-   "country": "France"
-  },
-  {
-   "name": "Kringlan",
-   "city": "Reykjavík",
-   "country": "Iceland"
-  },
-  {
-   "name": "Canal City Hakata",
-   "city": "Fukuoka",
-   "country": "Japan"
-  },
-  {
-   "name": "The Avenues",
-   "city": "Al Rai",
-   "country": "Kuwait"
-  },
-  {
-   "name": "Fisketorvet",
-   "city": "Copenhagen",
-   "country": "Denmark"
-  },
-  {
-   "name": "Ikeja City Mall",
-   "city": "Lagos",
-   "country": "Nigeria"
-  },
-  {
-   "name": "Złote Tarasy",
-   "city": "Warsaw",
-   "country": "Poland"
-  }
- ]
+  "note": "All malls already used or reserved. Never pick one of these again. Append every new mall here.",
+  "malls": [
+    {
+      "name": "Westfield Chodov",
+      "city": "Prague",
+      "country": "Czechia"
+    },
+    {
+      "name": "Hirsch Center",
+      "city": "Aachen",
+      "country": "Germany"
+    },
+    {
+      "name": "Magna Plaza",
+      "city": "Amsterdam",
+      "country": "Netherlands"
+    },
+    {
+      "name": "Nelson Mandela Square",
+      "city": "Johannesburg",
+      "country": "South Africa"
+    },
+    {
+      "name": "Kö-Galerie",
+      "city": "Düsseldorf",
+      "country": "Germany"
+    },
+    {
+      "name": "The Arcade",
+      "city": "Providence",
+      "country": "USA"
+    },
+    {
+      "name": "Galerías Pacífico",
+      "city": "Buenos Aires",
+      "country": "Argentina"
+    },
+    {
+      "name": "Galleria Vittorio Emanuele II",
+      "city": "Milan",
+      "country": "Italy"
+    },
+    {
+      "name": "Burlington Arcade",
+      "city": "London",
+      "country": "UK"
+    },
+    {
+      "name": "Omotesando Hills",
+      "city": "Tokyo",
+      "country": "Japan"
+    },
+    {
+      "name": "Queen Victoria Building",
+      "city": "Sydney",
+      "country": "Australia"
+    },
+    {
+      "name": "Souk Madinat Jumeirah",
+      "city": "Dubai",
+      "country": "UAE"
+    },
+    {
+      "name": "Galerie Vivienne",
+      "city": "Paris",
+      "country": "France"
+    },
+    {
+      "name": "Siam Paragon",
+      "city": "Bangkok",
+      "country": "Thailand"
+    },
+    {
+      "name": "Mall of America",
+      "city": "Bloomington",
+      "country": "USA"
+    },
+    {
+      "name": "V&A Waterfront",
+      "city": "Cape Town",
+      "country": "South Africa"
+    },
+    {
+      "name": "Ginza Six",
+      "city": "Tokyo",
+      "country": "Japan"
+    },
+    {
+      "name": "Galleria Umberto I",
+      "city": "Naples",
+      "country": "Italy"
+    },
+    {
+      "name": "Shopping Iguatemi",
+      "city": "São Paulo",
+      "country": "Brazil"
+    },
+    {
+      "name": "Mall of the Emirates",
+      "city": "Dubai",
+      "country": "UAE"
+    },
+    {
+      "name": "Powerscourt Townhouse Centre",
+      "city": "Dublin",
+      "country": "Ireland"
+    },
+    {
+      "name": "The Shoppes at Marina Bay Sands",
+      "city": "Singapore",
+      "country": "Singapore"
+    },
+    {
+      "name": "Mädler-Passage",
+      "city": "Leipzig",
+      "country": "Germany"
+    },
+    {
+      "name": "CF Toronto Eaton Centre",
+      "city": "Toronto",
+      "country": "Canada"
+    },
+    {
+      "name": "Costanera Center",
+      "city": "Santiago",
+      "country": "Chile"
+    },
+    {
+      "name": "Grand Bazaar",
+      "city": "Istanbul",
+      "country": "Turkey"
+    },
+    {
+      "name": "Chadstone",
+      "city": "Melbourne",
+      "country": "Australia"
+    },
+    {
+      "name": "Mall of Egypt",
+      "city": "Cairo",
+      "country": "Egypt"
+    },
+    {
+      "name": "Taikoo Li Sanlitun",
+      "city": "Beijing",
+      "country": "China"
+    },
+    {
+      "name": "Galeries Royales Saint-Hubert",
+      "city": "Brussels",
+      "country": "Belgium"
+    },
+    {
+      "name": "The Grove",
+      "city": "Los Angeles",
+      "country": "USA"
+    },
+    {
+      "name": "Starfield COEX Mall",
+      "city": "Seoul",
+      "country": "South Korea"
+    },
+    {
+      "name": "Westfield London",
+      "city": "London",
+      "country": "UK"
+    },
+    {
+      "name": "Mall of Africa",
+      "city": "Midrand",
+      "country": "South Africa"
+    },
+    {
+      "name": "Morocco Mall",
+      "city": "Casablanca",
+      "country": "Morocco"
+    },
+    {
+      "name": "Packages Mall",
+      "city": "Lahore",
+      "country": "Pakistan"
+    },
+    {
+      "name": "Field's",
+      "city": "Copenhagen",
+      "country": "Denmark"
+    },
+    {
+      "name": "Larcomar",
+      "city": "Lima",
+      "country": "Peru"
+    },
+    {
+      "name": "Manufaktura",
+      "city": "Łódź",
+      "country": "Poland"
+    },
+    {
+      "name": "Two Rivers Mall",
+      "city": "Nairobi",
+      "country": "Kenya"
+    },
+    {
+      "name": "GUM",
+      "city": "Moscow",
+      "country": "Russia"
+    },
+    {
+      "name": "Dubai Mall",
+      "city": "Dubai",
+      "country": "UAE"
+    },
+    {
+      "name": "Westfield Forum des Halles",
+      "city": "Paris",
+      "country": "France"
+    },
+    {
+      "name": "Kringlan",
+      "city": "Reykjavík",
+      "country": "Iceland"
+    },
+    {
+      "name": "Canal City Hakata",
+      "city": "Fukuoka",
+      "country": "Japan"
+    },
+    {
+      "name": "The Avenues",
+      "city": "Al Rai",
+      "country": "Kuwait"
+    },
+    {
+      "name": "Fisketorvet",
+      "city": "Copenhagen",
+      "country": "Denmark"
+    },
+    {
+      "name": "Ikeja City Mall",
+      "city": "Lagos",
+      "country": "Nigeria"
+    },
+    {
+      "name": "Złote Tarasy",
+      "city": "Warsaw",
+      "country": "Poland"
+    },
+    {
+      "name": "ICONSIAM",
+      "city": "Bangkok",
+      "country": "Thailand"
+    }
+  ]
 }

@@ -4,6 +4,9 @@ Goal: create ONE mall carousel + ONE reel for the target date and schedule both 
 No news, no stories (paused). Never post anything else. Never like or comment.
 
 ## Steps
+0. Target date = the date given in the task prompt (normally tomorrow, Europe/Berlin).
+   First call Metricool getScheduledPosts (blogId 8252854, Europe/Berlin) for the target date 07:00-10:00.
+   If a non-draft POST or REEL for 08:00/09:00 already exists, do NOT create new ones: log "already scheduled" and stop.
 1. Repo is ProjectShadowPages/malls-media (public, GitHub Pages: https://projectshadowpages.github.io/malls-media/).
 2. Read automation/malls-list.json. Pick a famous or interesting shopping mall/arcade that is NOT in the list
    (compare name and city). Vary countries/continents.
@@ -29,3 +32,7 @@ No news, no stories (paused). Never post anything else. Never like or comment.
      media = reel URL, text = short caption (1 line + question + same hashtags).
 10. Write a result line to automation/runlog.md (date, mall, Metricool post ids, OK/ERROR) and push.
 If any step fails: try once more. If it still fails, schedule nothing, write the error to runlog.md and push.
+
+## Platforms
+Currently only instagram + facebook. Threads, Pinterest, YouTube and Bluesky are added here only after they are
+connected in Metricool and tested once (see Gesamtkonzept). Do not add other providers on your own.

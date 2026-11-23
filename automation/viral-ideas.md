@@ -14,7 +14,6 @@ Facts here are leads only: always verify on the web before posting.
 - **Weird details:** strange doors, bizarre ads, odd rules. Small, specific, surprising.
 
 ## Mall leads (not yet in malls-list.json)
-- West Edmonton Mall (Edmonton, Canada) – indoor waterpark with huge wave pool, very large parking lot.
 - Villaggio Mall (Doha, Qatar) – Venice-style canal with gondola rides.
 - American Dream (East Rutherford, USA) – indoor ski slope and theme parks; Reddit: "like America colonised Mars".
 - New South China Mall (Dongguan, China) – for years called the world's emptiest mega mall (Venice canals, Paris zone).

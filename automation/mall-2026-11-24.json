@@ -1,0 +1,24 @@
+{
+  "date": "2026-11-24",
+  "slug": "wem",
+  "name": "West Edmonton Mall",
+  "city": "Edmonton",
+  "country": "Canada",
+  "flag": {"v": [[216, 6, 33], [255, 255, 255], [255, 255, 255], [216, 6, 33]]},
+  "accent": [32, 168, 160],
+  "icon": "wave",
+  "slides": [
+    ["QUICK FACTS", "West Edmonton Mall at a glance", ["Opened 15 September 1981", "Over 800 stores and services", "490,000 m² in total", "About 32 million visitors a year"]],
+    ["WORLD WATERPARK", "Surf's up, indoors", ["Built in 1985, World Waterpark covers 20,903 m². Its wave pool, the world's largest indoors, makes waves up to two metres high."]],
+    ["DEEP SEA LAKE", "Submarines once cruised this lake", ["From 1985 to 2005, four submarines toured the mall's lake, a record holder as the world's largest indoor lake. A Santa María replica sits there."]],
+    ["RECORDS", "Once the world's biggest mall", ["Guinness listed it as the largest indoor shopping centre in the world until 2004. Its parking lot, with 20,000+ spaces, holds a record too."]]
+  ],
+  "photo": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/e/e9/West_Edmonton_Mall_%E2%80%94_Entrance_50_%28509132625%29.jpg",
+    "kicker": "THE BUILDING",
+    "line": "Entrance 50 of a 490,000 m² giant",
+    "credit": "Photo: Simon Law / Wikimedia Commons, CC BY-SA 2.0"
+  },
+  "caption": "This Edmonton mall has the world's largest indoor wave pool 🇨🇦\n\nWest Edmonton Mall opened in 1981 and was the biggest mall on Earth until 2004. Inside: a waterpark with two-metre waves, a lake where submarines once gave tours, and a replica of Columbus's Santa María.\n\nWould you go for the shops or the waves? 👇\n\n#mallsoftheworld #westedmontonmall #edmonton #alberta #indoorwaterpark",
+  "address": "West Edmonton Mall\n8882 170 St NW, Edmonton, AB T5T 4J2, Canada"
+}

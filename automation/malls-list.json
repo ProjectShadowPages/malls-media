@@ -250,6 +250,11 @@
       "name": "ICONSIAM",
       "city": "Bangkok",
       "country": "Thailand"
+    },
+    {
+      "name": "West Edmonton Mall",
+      "city": "Edmonton",
+      "country": "Canada"
     }
   ]
 }

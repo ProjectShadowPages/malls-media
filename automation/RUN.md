@@ -10,6 +10,8 @@ Never post anything else. Never like, follow or comment.
 1. Repo is ProjectShadowPages/malls-media (public, GitHub Pages: https://projectshadowpages.github.io/malls-media/).
 2. Read automation/malls-list.json. Pick a famous or interesting shopping mall/arcade that is NOT in the list
    (compare name and city). Vary countries/continents and types (historic arcade, mega mall, outlet, luxury, quirky).
+   Read automation/viral-ideas.md first: about every second day pick a mall lead or use a pattern from it
+   (absurd attraction, size in human terms, weird detail ...). Remove a used lead from that file.
 3. Research it on the web. Use only facts you found in at least one reliable source (Wikipedia, official site,
    major newspaper). No guessing. Keep numbers exact as in the source.
 4. Photo of the building (outside view) for slide 2:
@@ -32,6 +34,10 @@ Never post anything else. Never like, follow or comment.
      Write like a real person, short and natural: no filler words, no hype clichés ("nestled", "vibrant",
      "a must-visit", "whether you're…"), no long dashes, max ~60 words before the hashtags.
    - address: "<Name>\n<street, postcode city, country>".
+   - HOOKS: before writing caption line 1, write 10 different hooks (each under 12 words; curiosity, bold claim
+     or surprising number; each must be true). Rank them, take the best for caption line 1 and the reel caption,
+     the second best as headline of the most surprising slide. Keep search keywords (mall, city) in line 1.
+     Write the winning hook into runlog.md.
    - Instagram handle of the mall: look for the official Instagram link on the mall's OFFICIAL website (footer/contact).
      Only if it is clearly linked there: mention it once in the caption ("📍 @handle") and tag it on slide 1
      (instagramData.carouselTags {"0":[{"username":"handle","x":0.5,"y":0.5}]}). Never guess a handle.

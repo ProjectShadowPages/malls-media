@@ -120,8 +120,8 @@ def footer(d, i, n, accent):
 
 def title_slide(m, n):
     im = Image.new("RGB", (W, H), (0, 0, 0)); d = ImageDraw.Draw(im)
-    logo = Image.open(os.path.join(BASE, "logo.png")).convert("RGB").resize((130, 130))
-    im.paste(logo, (M - 20, 50))
+    logo = Image.open(os.path.join(BASE, "logo.png")).convert("RGB").resize((200, 200))
+    im.paste(logo, (M - 36, 40))
     fw, fh = 195, 130
     fl = flag(m["flag"], fw, fh); im.paste(fl, ((W - fw)//2, 240))
     d.rectangle([(W - fw)//2 - 2, 238, (W + fw)//2 + 1, 240 + fh + 1], outline=WHITE, width=2)

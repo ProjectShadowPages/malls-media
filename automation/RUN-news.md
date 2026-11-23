@@ -4,7 +4,7 @@ Goal: 3 mall-news STORIES (images only) on Instagram + Facebook. English. Nothin
 
 1. Repo ProjectShadowPages/malls-media (GitHub Pages: https://projectshadowpages.github.io/malls-media/).
 2. Read automation/news-log.md. Do not repeat a news item listed there.
-3. Search the web for shopping-mall news from the last 3-4 days, worldwide (openings, closures, sales of malls,
+3. Search the web for shopping-mall news PUBLISHED in the last 4 days (check the article date; older articles are not allowed even if the event is recent), worldwide (openings, closures, sales of malls,
    big new stores, visitor/sales figures). Open each source page and take facts ONLY from it. Use reliable outlets
    (newspapers, trade press, company releases). Pick 3 different items, ideally from different countries.
 4. Write automation/news-<date>.json (format in automation/news.py docstring): short headline (max ~40 chars),

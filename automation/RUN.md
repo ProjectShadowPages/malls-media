@@ -17,8 +17,7 @@ No news, no stories (paused). Never post anything else. Never like or comment.
    - Headlines max ~35 characters, body short (max ~180 characters per slide).
    - flag: use a known name (italy, iceland, denmark, japan, pakistan, nigeria, thailand, russia, kuwait, poland, france)
      or simple stripes {"h":[[r,g,b],...]} / {"v":[[r,g,b],...]}. Prefer a mall whose country flag is simple stripes or listed.
-   - caption: hook line with flag emoji, 2-3 short sentences, a question with 👇, then exactly
-     "#mallsoftheworld #<city> #shoppingmall #architecture #travel". address: "<Name>\n<street, postcode city, country>".
+   - caption: hook line with flag emoji, 2-3 short sentences, a question with 👇, then "#mallsoftheworld" plus 3-4 hashtags that fit THIS mall (city, country, special feature such as #artdeco, #rooftop, #aquarium). Vary them every day; never repeat the same block. No banned or unrelated hashtags. address: "<Name>\n<street, postcode city, country>".
 5. Run: cd automation && python3 build.py mall-<date>.json   (needs Pillow + ffmpeg; install if missing:
    pip install pillow --break-system-packages; apt-get install -y ffmpeg if needed)
 6. Look at the slides (open 2-3 JPEGs) to check that no text overflows.

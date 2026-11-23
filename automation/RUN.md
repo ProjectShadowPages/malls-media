@@ -1,7 +1,7 @@
-# Daily run – Malls Worldwide (@malls_oftheworld)
+# Daily mall run – Malls Worldwide (@malls_oftheworld)
 
-Goal: create ONE mall carousel + ONE reel for the target date and schedule both in Metricool. Everything in English.
-No news, no stories (paused). Never post anything else. Never like or comment.
+Goal: create ONE mall carousel (7 slides) + ONE reel for the target date and schedule both in Metricool. Everything in English.
+Never post anything else. Never like, follow or comment.
 
 ## Steps
 0. Target date = the date given in the task prompt (normally tomorrow, Europe/Berlin).
@@ -9,31 +9,44 @@ No news, no stories (paused). Never post anything else. Never like or comment.
    If a non-draft POST or REEL for 15:00/16:00 already exists, do NOT create new ones: log "already scheduled" and stop.
 1. Repo is ProjectShadowPages/malls-media (public, GitHub Pages: https://projectshadowpages.github.io/malls-media/).
 2. Read automation/malls-list.json. Pick a famous or interesting shopping mall/arcade that is NOT in the list
-   (compare name and city). Vary countries/continents.
+   (compare name and city). Vary countries/continents and types (historic arcade, mega mall, outlet, luxury, quirky).
 3. Research it on the web. Use only facts you found in at least one reliable source (Wikipedia, official site,
    major newspaper). No guessing. Keep numbers exact as in the source.
-4. Write automation/mall-<date>.json (format: see docstring in automation/build.py). Rules:
-   - 4 content slides (= 6 slides in total). Slide 1 "QUICK FACTS" with 3-4 short bullet facts.
+4. Photo of the building (outside view) for slide 2:
+   cd automation && python3 find_photo.py "<mall name> <city>"   (try also "<mall name> exterior" / "<mall name> building")
+   Choose ONE candidate that clearly shows the building from OUTSIDE (judge by title/description), landscape or square,
+   width >= 1200. Only the free licences the script lists (CC0, public domain, CC BY, CC BY-SA).
+   credit = "Photo: <author> / Wikimedia Commons, <licence>". If nothing suitable: no photo (then 5 content slides).
+5. Write automation/mall-<date>.json (format: see docstring in automation/build.py). Rules:
+   - Always 7 slides in total: with photo = 4 content slides, without photo = 5 content slides.
+   - First content slide "QUICK FACTS" with 3-4 short bullet facts. Others: one surprising fact/story each.
    - Headlines max ~35 characters, body short (max ~180 characters per slide).
-   - flag: use a known name (italy, iceland, denmark, japan, pakistan, nigeria, thailand, russia, kuwait, poland, france)
-     or simple stripes {"h":[[r,g,b],...]} / {"v":[[r,g,b],...]}. Prefer a mall whose country flag is simple stripes or listed.
-   - caption: hook line with flag emoji, 2-3 short sentences, a question with 👇, then "#mallsoftheworld" plus 3-4 hashtags that fit THIS mall (city, country, special feature such as #artdeco, #rooftop, #aquarium). Vary them every day; never repeat the same block. No banned or unrelated hashtags. address: "<Name>\n<street, postcode city, country>".
+   - accent: vary it day by day (gold, teal, coral, violet, sky blue, lime ... never the same as yesterday).
+   - flag: a known name (italy, iceland, denmark, japan, pakistan, nigeria, thailand, russia, kuwait, poland, france)
+     or simple stripes {"h":[[r,g,b],...]} / {"v":[[r,g,b],...]}.
+   - caption (vary the writing style every day: sometimes a question first, sometimes a number, sometimes a short story):
+     line 1 = hook WITH search keywords, e.g. "The shopping mall in Bangkok you can reach by boat 🇹🇭";
+     2-3 short sentences; a question with 👇; then "#mallsoftheworld" plus 3-4 hashtags that fit THIS mall
+     (city, country, special feature). Never repeat the same block. No banned or unrelated hashtags.
+     If a photo is used, its credit line goes at the end of the caption (build.py adds it automatically).
+   - address: "<Name>\n<street, postcode city, country>".
    - Instagram handle of the mall: look for the official Instagram link on the mall's OFFICIAL website (footer/contact).
      Only if it is clearly linked there: mention it once in the caption ("📍 @handle") and tag it on slide 1
      (instagramData.carouselTags {"0":[{"username":"handle","x":0.5,"y":0.5}]}). Never guess a handle.
      If Metricool rejects the tag, schedule again without carouselTags but keep the mention. Write the handle (or "none") to runlog.md.
-5. Run: cd automation && python3 build.py mall-<date>.json   (needs Pillow + ffmpeg; install if missing:
-   pip install pillow --break-system-packages; apt-get install -y ffmpeg if needed)
-6. Look at the slides (open 2-3 JPEGs) to check that no text overflows.
-7. Append the mall to automation/malls-list.json. git add, commit, push to main.
-8. Wait until https://projectshadowpages.github.io/malls-media/media/<date>/<prefix>-01.jpg is online
+6. Run: cd automation && python3 build.py mall-<date>.json   (needs Pillow + ffmpeg; install if missing:
+   pip install pillow --break-system-packages; apt-get install -y ffmpeg if needed).
+   build.py downloads the photo, builds 7 slides and a 9:16 reel (3 s per slide, music from /music if present).
+7. Look at the slides (open 3 JPEGs, including slide 2) to check that no text overflows and the photo shows the building.
+8. Append the mall to automation/malls-list.json. git add, commit, push to main.
+9. Wait until https://projectshadowpages.github.io/malls-media/media/<date>/<prefix>-01.jpg is online
    (about 1-3 min; Metricool fails if the file is not there yet). If you cannot check it directly, wait 3 minutes.
-9. Metricool (blogId 8252854, timezone Europe/Berlin), providers instagram + facebook, autoPublish true, draft false:
-   - 15:00 on target date: instagramData {"type":"POST"}, facebookData {"type":"POST"}, media = the 6 JPEG URLs,
-     mediaAltText one short line per slide, text = caption + "\n\n\n" + address.
+10. Metricool (blogId 8252854, timezone Europe/Berlin), providers instagram + facebook, autoPublish true, draft false:
+   - 15:00 on target date: instagramData {"type":"POST"}, facebookData {"type":"POST"}, media = the 7 JPEG URLs,
+     mediaAltText one short line per slide, text = caption.txt content.
    - 16:00 on target date: instagramData {"type":"REEL","showReelOnFeed":true}, facebookData {"type":"REEL","title":"<short title>"},
-     media = reel URL, text = short caption (1 line + question + same hashtags).
-10. Write a result line to automation/runlog.md (date, mall, Metricool post ids, OK/ERROR) and push.
+     media = reel URL, text = short caption (keyword hook line + question + same hashtags).
+11. Write a result line to automation/runlog.md (date, mall, photo yes/no, handle, music, Metricool post ids, OK/ERROR) and push.
 If any step fails: try once more. If it still fails, schedule nothing, write the error to runlog.md and push.
 
 ## Platforms

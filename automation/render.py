@@ -120,23 +120,44 @@ def footer(d, i, n, accent):
 
 def title_slide(m, n):
     im = Image.new("RGB", (W, H), (0, 0, 0)); d = ImageDraw.Draw(im)
-    fl = flag(m["flag"]); im.paste(fl, ((W - 300)//2, 150))
-    d.rectangle([(W - 300)//2 - 2, 148, (W + 300)//2 + 1, 351], outline=WHITE, width=2)
-    k = font("Bold", 36); t = "MALL OF THE DAY"
+    logo = Image.open(os.path.join(BASE, "logo.png")).convert("RGB").resize((130, 130))
+    im.paste(logo, (M - 20, 50))
+    fw, fh = 195, 130
+    fl = flag(m["flag"], fw, fh); im.paste(fl, ((W - fw)//2, 240))
+    d.rectangle([(W - fw)//2 - 2, 238, (W + fw)//2 + 1, 240 + fh + 1], outline=WHITE, width=2)
+    k = font("ExtraBold", 60); t = "MALL OF THE DAY"
     d.text(((W - d.textlength(t, font=k))/2, 420), t, font=k, fill=m["accent"])
-    icon(d, m["icon"], W/2, 600, 190, WHITE)
+    icon(d, m["icon"], W/2, 640, 170, WHITE)
     size = 104
     while True:
         f = font("ExtraBold", size); lines = wrap(d, m["name"], f, W - 2*M)
         if len(lines) <= 3 and all(d.textlength(l, font=f) <= W - 2*M for l in lines): break
         size -= 4
-    y = 760
+    y = 800
     for l in lines:
         d.text(((W - d.textlength(l, font=f))/2, y), l, font=f, fill=WHITE); y += int(size * 1.12)
     y += 20; d.rectangle([W/2 - 90, y, W/2 + 90, y + 8], fill=m["accent"]); y += 40
     f2 = font("SemiBold", 52); t = f"{m['city']}, {m['country']}"
     d.text(((W - d.textlength(t, font=f2))/2, y), t, font=f2, fill=WHITE)
     footer(d, 1, n, m["accent"]); return im
+
+def photo_slide(m, idx, n, photo, kicker, line, credit):
+    im = Image.new("RGB", (W, H), (0, 0, 0)); d = ImageDraw.Draw(im)
+    ph = Image.open(photo).convert("RGB"); ah = 880
+    r = max(W / ph.width, ah / ph.height); ph = ph.resize((int(ph.width * r) + 1, int(ph.height * r) + 1))
+    x0 = (ph.width - W) // 2; y0 = (ph.height - ah) // 2
+    im.paste(ph.crop((x0, y0, x0 + W, y0 + ah)), (0, 0))
+    d.rectangle([0, ah, W, ah + 10], fill=m["accent"])
+    y = ah + 50
+    d.text((M, y), kicker, font=font("Bold", 38), fill=m["accent"]); y += 70
+    for l in wrap(d, line, font("ExtraBold", 64), W - 2*M)[:3]:
+        d.text((M, y), l, font=font("ExtraBold", 64), fill=WHITE); y += 76
+    cf = font("Medium", 24)
+    cl = wrap(d, credit, cf, W - 2*M)[:2]
+    cy = H - 150 - 30 * (len(cl) - 1)
+    for l in cl:
+        d.text((M, cy), l, font=cf, fill=(170, 170, 170)); cy += 30
+    footer(d, idx, n, m["accent"]); return im
 
 def content_slide(m, idx, n, kicker, head, body):
     im = Image.new("RGB", (W, H), (0, 0, 0)); d = ImageDraw.Draw(im)

@@ -1,2 +1,3 @@
 # Run log
 - 2026-11-23 | ICONSIAM (Bangkok, Thailand) | Metricool POST 437394731 (08:00), REEL 437394742 (09:00) | OK. Note: 2026-11-22 Dubai Mall carousel failed on Instagram ("We restrict certain activity to protect our community"); FB was fine.
+- 2026-11-23 | NEWS | Chicago malls open early for Black Friday; New Mosel mall revives old Real site (Kenn); 118 Mall opens under Merdeka 118 (KL) | Metricool STORY ig+fb 438490081 (12:30), 438490130 (12:31), 438490165 (12:32) | OK. Note: 3 older DRAFT stories (438445873/888/907, Thai/Gqeberha/Oakridge) also sit at 12:30-12:32 from an earlier session; left untouched (drafts do not auto-publish).

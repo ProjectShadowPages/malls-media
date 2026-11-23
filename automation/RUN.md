@@ -29,6 +29,8 @@ Never post anything else. Never like, follow or comment.
      2-3 short sentences; a question with 👇; then "#mallsoftheworld" plus 3-4 hashtags that fit THIS mall
      (city, country, special feature). Never repeat the same block. No banned or unrelated hashtags.
      If a photo is used, its credit line goes at the end of the caption (build.py adds it automatically).
+     Write like a real person, short and natural: no filler words, no hype clichés ("nestled", "vibrant",
+     "a must-visit", "whether you're…"), no long dashes, max ~60 words before the hashtags.
    - address: "<Name>\n<street, postcode city, country>".
    - Instagram handle of the mall: look for the official Instagram link on the mall's OFFICIAL website (footer/contact).
      Only if it is clearly linked there: mention it once in the caption ("📍 @handle") and tag it on slide 1

@@ -25,7 +25,10 @@ Never post anything else. Never like, follow or comment.
    - Headlines max ~35 characters, body short (max ~180 characters per slide).
    - accent: vary it day by day (gold, teal, coral, violet, sky blue, lime ... never the same as yesterday).
    - flag: a known name (italy, iceland, denmark, japan, pakistan, nigeria, thailand, russia, kuwait, poland, france)
-     or simple stripes {"h":[[r,g,b],...]} / {"v":[[r,g,b],...]}.
+     or simple stripes {"h":[[r,g,b],...]} / {"v":[[r,g,b],...]}. Known names also: canada.
+     Stripes only if the real flag is ONLY stripes. If the flag has an emblem (leaf, star, sun, crest ...),
+     add it as a new named flag in render.py, render it and check the image: a flag must never look like
+     another country's flag.
    - caption (vary the writing style every day: sometimes a question first, sometimes a number, sometimes a short story):
      line 1 = hook WITH search keywords, e.g. "The shopping mall in Bangkok you can reach by boat 🇹🇭";
      2-3 short sentences; a question with 👇; then "#mallsoftheworld" plus 3-4 hashtags that fit THIS mall

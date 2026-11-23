@@ -4,7 +4,7 @@
   "name": "West Edmonton Mall",
   "city": "Edmonton",
   "country": "Canada",
-  "flag": {"v": [[216, 6, 33], [255, 255, 255], [255, 255, 255], [216, 6, 33]]},
+  "flag": "canada",
   "accent": [32, 168, 160],
   "icon": "wave",
   "slides": [

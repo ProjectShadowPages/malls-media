@@ -56,6 +56,14 @@ def flag(kind, w=300, h=200):
     elif kind == "kuwait":
         d.rectangle([0, 0, w, h/3], fill=(0, 122, 61)); d.rectangle([0, 2*h/3, w, h], fill=(206, 17, 38))
         d.polygon([(0, 0), (w/4, h/3), (w/4, 2*h/3), (0, h)], fill=(0, 0, 0))
+    elif kind == "canada":
+        red = (216, 6, 33)
+        d.rectangle([0, 0, w/4, h], fill=red); d.rectangle([3*w/4, 0, w, h], fill=red)
+        leaf = [(0,-1),(.13,-.75),(.27,-.8),(.2,-.38),(.45,-.62),(.5,-.5),(.75,-.55),(.65,-.3),(.75,-.25),
+                (.4,.05),(.45,.2),(.05,.15),(.05,.6),(-.05,.6),(-.05,.15),(-.45,.2),(-.4,.05),(-.75,-.25),
+                (-.65,-.3),(-.75,-.55),(-.5,-.5),(-.45,-.62),(-.2,-.38),(-.27,-.8),(-.13,-.75)]
+        s = h * 0.36; cx, cy = w/2, h/2 + h*0.04
+        d.polygon([(cx + x*s, cy + y*s) for x, y in leaf], fill=red)
     elif kind == "poland":
         d.rectangle([0, h/2, w, h], fill=(220, 20, 60))
     return im

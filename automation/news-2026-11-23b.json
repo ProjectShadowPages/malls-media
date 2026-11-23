@@ -1,0 +1,11 @@
+{"date":"2026-11-23","items":[
+{"slug":"chicago-blackfriday","accent":[255,90,60],"region":"CHICAGO, USA","headline":"Chicago malls open early for Black Friday",
+ "facts":[["6 a.m.","Woodfield, Gurnee Mills, Orland Square and more open their doors"],["14 malls","listed with early Black Friday hours"],["9 p.m.","closing time at most of them"]],
+ "source":"NBC Chicago, 21 Nov 2026"},
+{"slug":"kenn-mosel","accent":[80,200,120],"region":"KENN, GERMANY","headline":"New Mosel mall revives old Real site",
+ "facts":[["19 Nov","opening of the Mosel-Einkaufszentrum near Trier"],["8,500 m²","main building with Rewe, Aldi Süd and dm"],["350","parking spaces on a 40,000 m² site"]],
+ "source":"Wochenspiegel, 10 Nov 2026"},
+{"slug":"kl-118mall","accent":[90,150,255],"region":"KUALA LUMPUR","headline":"118 Mall opens under Merdeka 118",
+ "facts":[["1.5M sq ft","of space across seven levels"],["300+","retail outlets planned, 158 on opening day"],["88 m","glass dome over The Atmosphere event space"]],
+ "source":"TNG Digital, 3 Nov 2026"}
+]}

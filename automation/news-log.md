@@ -6,3 +6,6 @@
 - 2026-11-23 | Thai malls gear up for Christmas (The Mall Group 600M baht) | Nation Thailand
 - 2026-11-23 | The Village on Circular, Gqeberha, opens 26 Nov | Property Wheel
 - 2026-11-23 | Macerich buys Oakridge Mall San Jose $250M | Chain Store Age
+- 2026-11-23 | Chicago malls open early for Black Friday | https://www.nbcchicago.com/news/local/planning-for-black-friday-heres-which-malls-are-opening-early-and-their-hours/4019873/
+- 2026-11-23 | Mosel-Einkaufszentrum Kenn opens 19 Nov (ex-Real site) | https://www.wochenspiegellive.de/kreis-trier-saarburg/artikel/neues-mosel-einkaufszentrum-in-kenn-nach-fuenf-jahren-kehrt-leben-zurueck
+- 2026-11-23 | 118 Mall Kuala Lumpur opened 1 Nov | https://www.tngdigital.com.my/blog/merdeka-118-mall-opening-what-to-expect-at-kls-new-shopping-mall/

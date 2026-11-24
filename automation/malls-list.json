@@ -255,6 +255,11 @@
       "name": "West Edmonton Mall",
       "city": "Edmonton",
       "country": "Canada"
+    },
+    {
+      "name": "SM Mall of Asia",
+      "city": "Pasay",
+      "country": "Philippines"
     }
   ]
 }

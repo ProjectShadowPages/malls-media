@@ -1,0 +1,29 @@
+{
+  "date": "2026-11-25",
+  "slug": "moa",
+  "name": "SM Mall of Asia",
+  "city": "Pasay",
+  "country": "Philippines",
+  "flag": "philippines",
+  "accent": [255, 111, 97],
+  "icon": "cart",
+  "cover": ["THE MALL WITH", "THE WORLD'S", "*LARGEST IKEA"],
+  "slides": [
+    ["QUICK FACTS", "SM Mall of Asia at a glance", ["Opened 21 May 2006", "663 shops, 217 places to eat", "About 497,000 m² of floor area", "Largest mall in the Philippines"]],
+    ["OPENING DAY", "Nearly a million people on day one", ["SM reported about one million visitors on opening day in May 2006. President Gloria Macapagal Arroyo attended the inauguration."]],
+    ["MOA SQUARE", "IKEA's biggest store on Earth", ["The MOA Square expansion opened in 2021. Its IKEA covers 65,000 m², making it IKEA's largest store in the world."]],
+    ["ON ICE", "Olympic-size ice in the tropics", ["The Philippines' first Olympic-sized ice skating rink sits on the mall's third level. It covers 1,800 m²."]],
+    ["BY THE BAY", "Built on reclaimed land", ["The mall stands on reclaimed land along Manila Bay. Next to it turns the MOA Eye, a 55-metre Ferris wheel with 36 air-conditioned gondolas."]]
+  ],
+  "photo": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/4/40/SM_Mall_of_Asia_Aerial_Shot.JPG",
+    "credit": "Photo: Jimaggro / Wikimedia Commons, CC BY-SA 4.0"
+  },
+  "caption": "The Metro Manila mall with the world's largest IKEA store 🇵🇭\n\nSM Mall of Asia sits on reclaimed land by Manila Bay in Pasay. Nearly one million people came on opening day in 2006. Today it has 663 shops, an Olympic-size ice rink and an IKEA of 65,000 m².\n\nSend this to the friend who could spend all day in IKEA 👇\n\n#mallsoftheworld #smmallofasia #manila #philippines #manilabay",
+  "address": "SM Mall of Asia\nSeaside Blvd, Bay City, Pasay, Metro Manila, Philippines",
+  "sources": [
+    "https://en.wikipedia.org/wiki/SM_Mall_of_Asia",
+    "https://www.philstar.com/business/2006/05/26/338642/mall-asia-draws-1m-opening-day",
+    "https://commons.wikimedia.org/wiki/File:SM_Mall_of_Asia_Aerial_Shot.JPG"
+  ]
+}

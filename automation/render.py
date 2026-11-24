@@ -64,6 +64,22 @@ def flag(kind, w=300, h=200):
                 (-.65,-.3),(-.75,-.55),(-.5,-.5),(-.45,-.62),(-.2,-.38),(-.27,-.8),(-.13,-.75)]
         s = h * 0.36; cx, cy = w/2, h/2 + h*0.04
         d.polygon([(cx + x*s, cy + y*s) for x, y in leaf], fill=red)
+    elif kind == "philippines":
+        d.rectangle([0, 0, w, h/2], fill=(0, 56, 168)); d.rectangle([0, h/2, w, h], fill=(206, 17, 38))
+        tw = h * math.sqrt(3) / 2; gold = (252, 209, 22)
+        d.polygon([(0, 0), (tw, h/2), (0, h)], fill=WHITE)
+        cx, cy = tw / 3, h / 2; r = h * 0.09
+        for k in range(8):  # 8 rays (each a narrow triangle)
+            a = math.radians(k * 45 + 22.5)
+            for da in (-7, 0, 7):
+                b = math.radians(k * 45 + 22.5 + da)
+                d.polygon([(cx + r*0.9*math.cos(b - 0.12), cy + r*0.9*math.sin(b - 0.12)),
+                           (cx + r*2.0*math.cos(b), cy + r*2.0*math.sin(b)),
+                           (cx + r*0.9*math.cos(b + 0.12), cy + r*0.9*math.sin(b + 0.12))], fill=gold)
+        d.ellipse([cx - r, cy - r, cx + r, cy + r], fill=gold)
+        s = h * 0.055
+        for sx, sy in ((h*0.08, h*0.09), (h*0.08, h*0.91), (tw - h*0.11, h/2)):
+            star(d, sx, sy, s, gold)
     elif kind == "poland":
         d.rectangle([0, h/2, w, h], fill=(220, 20, 60))
     return im

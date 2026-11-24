@@ -9,3 +9,7 @@
 - 2026-11-23 | Chicago malls open early for Black Friday | https://www.nbcchicago.com/news/local/planning-for-black-friday-heres-which-malls-are-opening-early-and-their-hours/4019873/
 - 2026-11-23 | Mosel-Einkaufszentrum Kenn opens 19 Nov (ex-Real site) | https://www.wochenspiegellive.de/kreis-trier-saarburg/artikel/neues-mosel-einkaufszentrum-in-kenn-nach-fuenf-jahren-kehrt-leben-zurueck
 - 2026-11-23 | 118 Mall Kuala Lumpur opened 1 Nov | https://www.tngdigital.com.my/blog/merdeka-118-mall-opening-what-to-expect-at-kls-new-shopping-mall/
+- 2026-11-24 | Dubai Shopping Festival is back (32nd, 45 days) | https://www.emirates247.com/uae/dubai-shopping-festival-unveils-45-day-programme-of-entertainment-shopping-and-experiences-for-its-32nd-edition/8074
+- 2026-11-24 | Fewer Thanksgiving shoppers expected (NRF 182.7M) | https://www.retaildive.com/news/black-friday-cyber-monday-shopping-projected-to-slip/875473/
+- 2026-11-24 | AAPE opens first India store, Ambience Mall Vasant Kunj | https://indiaeducationdiary.in/aape-by-a-bathing-ape-makes-its-india-debut-at-ambience-mall-vasant-kunj/
+- 2026-11-24 | Manila malls set holiday hours | https://primer.com.ph/blog/2026/11/24/list-holiday-mall-hours-in-metro-manila-2026-for-christmas-and-new-year/

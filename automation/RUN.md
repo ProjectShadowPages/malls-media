@@ -72,9 +72,23 @@ Never post anything else. Never like, follow or comment.
    - times.story: instagramData {"type":"STORY"}, facebookData {"type":"STORY"}, media = <prefix>-story.jpg URL, NO text.
    - times.reel on target date: instagramData {"type":"REEL","showReelOnFeed":true}, facebookData {"type":"REEL","title":"<short title>"},
      media = reel URL, text = short caption (keyword hook line + question + same hashtags).
-11. Write a result line to automation/runlog.md (date, mall, photo yes/no, handle, music, times, Metricool ids of post/story/reel, OK/ERROR) and push.
+   Extra platforms (tested OK 24.11.), each a SEPARATE scheduled post with its own text (never copy the IG caption 1:1):
+   - post + 20 min, provider threads, threadsData {}: media = the 7 JPEG URLs, text = hook line + 2 short sentences
+     + question + exactly ONE topic hashtag (e.g. #shopping) + photo credit line. No hashtag block.
+   - post + 25 min, provider bluesky, blueskyData {"postLanguages":["en"]}: media = max 4 JPEGs (slide 1 + the 3 most
+     interesting), text max 300 characters INCLUDING the credit line (count it!), 1 hashtag.
+   - post + 30 min, provider pinterest: media = slide 1 only, pinterestData {"boardId":"Shopping Malls of the World",
+     "pinTitle":"<Mall>, <Country>: <hook> (max 100 chars)", "pinLink":"https://www.instagram.com/malls_oftheworld/",
+     "pinNewFormat":false,"isAiGenerated":false}, text = SEO description 2-3 sentences with search words
+     (shopping mall, city, country, travel) + 3 hashtags + credit if photo.
+   - reel + 10 min, provider youtube: media = reel URL, youtubeData {"title":"<Mall>: <hook> #shorts" (max 100 chars),
+     "type":"short","privacy":"public","tags":[mall, city, country, "shopping mall", "malls of the world"],
+     "category":"TRAVEL_EVENTS","madeForKids":false,"isAiGeneratedContent":false}, text = 2-3 sentences + question
+     + credit + "#shoppingmall #<city> #shorts".
+   If one extra platform fails, still schedule the others and log the error.
+11. Write a result line to automation/runlog.md (date, mall, photo yes/no, handle, music, times, Metricool ids of post/story/reel/threads/bluesky/pinterest/youtube, OK/ERROR) and push.
 If any step fails: try once more. If it still fails, schedule nothing, write the error to runlog.md and push.
 
 ## Platforms
-Currently only instagram + facebook. Threads, Pinterest, YouTube and Bluesky are added here only after they are
-connected in Metricool and tested once (see Gesamtkonzept). Do not add other providers on your own.
+instagram + facebook (post, story, reel), threads, bluesky, pinterest, youtube (shorts) - all connected and tested 24.11.
+Do not add other providers (no X, no TikTok, no LinkedIn) on your own.

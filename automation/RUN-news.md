@@ -1,11 +1,12 @@
 # Daily news run – Malls Worldwide (@malls_oftheworld)
 
-Goal: 4 mall-news STORIES (images) on Instagram + Facebook at 17:00, 18:00, 19:00 and 20:00 (Europe/Berlin) of the
-target date. On WEDNESDAYS and SATURDAYS additionally ONE news REEL at 21:00 built from these 4 stories.
+Goal: 4 mall-news STORIES (images) on Instagram + Facebook one every 6 hours: 03:00, 09:00, 15:00 and 21:00 (Europe/Berlin) of the
+target date (Lars 24.11.: reach all time zones). On WEDNESDAYS and SATURDAYS additionally ONE news REEL at 21:30 built from
+these 4 stories (or the best recent ones).
 English. Nothing else: no posts, no likes/comments/follows.
 
-0. Target date = date in the task prompt (normally today). Call Metricool getScheduledPosts for 16:30-21:30 that day.
-   If non-draft stories for 17:00-20:00 already exist, stop and only log "already scheduled".
+0. Target date = date in the task prompt (normally today). Call Metricool getScheduledPosts for 02:30-22:00 that day.
+   If non-draft news stories for 03:00/09:00/15:00/21:00 already exist, stop and only log "already scheduled".
 1. Repo ProjectShadowPages/malls-media (GitHub Pages: https://projectshadowpages.github.io/malls-media/).
 2. Read automation/news-log.md. Do not repeat a news item listed there.
 3. Search the web for shopping-mall news PUBLISHED in the last 4 days (check the article date; older articles are not
@@ -29,8 +30,8 @@ English. Nothing else: no posts, no likes/comments/follows.
 9. Wait ~3 minutes until the files are online on GitHub Pages.
 10. Metricool (blogId 8252854, Europe/Berlin), providers instagram + facebook, autoPublish true, draft false:
     - 4 stories, NO text: instagramData {"type":"STORY"}, facebookData {"type":"STORY"}, one image each,
-      at 17:00, 18:00, 19:00, 20:00.
-    - Wed/Sat: reel at 21:00: instagramData {"type":"REEL","showReelOnFeed":true}, facebookData {"type":"REEL","title":"Mall news"},
+      at 03:00, 09:00, 15:00, 21:00 (if a time is already in the past when you run, skip only that slot).
+    - Wed/Sat: reel at 21:30: instagramData {"type":"REEL","showReelOnFeed":true}, facebookData {"type":"REEL","title":"Mall news"},
       text = "Mall news from around the world 🗞️" + one line per news item + a question + "#mallsoftheworld #mallnews #shopping #retailnews".
 11. Append a result line to automation/runlog.md (date, "NEWS", headlines, reel yes/no, Metricool ids, OK/ERROR) and push.
 If a step fails twice: schedule nothing, log the error, push.

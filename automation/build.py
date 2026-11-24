@@ -68,6 +68,34 @@ if photo and photo["credit"] not in cap:
     cap += "\n\n" + photo["credit"]
 open(os.path.join(out, "caption.txt"), "w").write(cap + "\n\n\n" + m["address"] + "\n")
 
+# Story "New post" (9:16): blurred background, title slide in the middle, label on top
+def new_post_story():
+    from PIL import ImageDraw
+    SW, SH = 1080, 1920
+    src = Image.open(slides[1] if photo else slides[0]).convert("RGB")
+    r = max(SW / src.width, SH / src.height); bg = src.resize((int(src.width * r) + 1, int(src.height * r) + 1))
+    bg = bg.crop(((bg.width - SW) // 2, (bg.height - SH) // 2, (bg.width - SW) // 2 + SW, (bg.height - SH) // 2 + SH))
+    bg = ImageEnhance.Brightness(bg.filter(ImageFilter.GaussianBlur(40))).enhance(0.4)
+    t = Image.open(slides[0]).convert("RGB"); tw = 820; t = t.resize((tw, int(t.height * tw / t.width)))
+    y0 = (SH - t.height) // 2 + 40
+    d = ImageDraw.Draw(bg)
+    d.rectangle([(SW - tw) // 2 - 4, y0 - 4, (SW + tw) // 2 + 3, y0 + t.height + 3], outline=(255, 255, 255), width=4)
+    bg.paste(t, ((SW - tw) // 2, y0))
+    acc = tuple(m["accent"]); k = render.font("ExtraBold", 96); txt = "NEW POST"
+    d.text(((SW - d.textlength(txt, font=k)) / 2, y0 - 190), txt, font=k, fill=acc)
+    k2 = render.font("Medium", 44); txt2 = f"{len(slides)} slides about {m['name']}"
+    if d.textlength(txt2, font=k2) > SW - 120: txt2 = f"{len(slides)} slides: today's mall"
+    d.text(((SW - d.textlength(txt2, font=k2)) / 2, y0 + t.height + 60), txt2, font=k2, fill=(255, 255, 255))
+    k3 = render.font("Medium", 38); txt3 = "Tap our profile to see it"
+    d.text(((SW - d.textlength(txt3, font=k3)) / 2, y0 + t.height + 130), txt3, font=k3, fill=(200, 200, 200))
+    p = os.path.join(out, f"{prefix}-story.jpg"); bg.save(p, quality=90); return p
+story = new_post_story()
+
+# Publication times vary a little per day (against "template" look): post 14:50-15:10, story +5 min, reel +60 min
+off = int(m["date"].replace("-", "")) * 13 % 21 - 10
+def hm(mins): return f"{mins // 60:02d}:{mins % 60:02d}"
+times = {"post": hm(900 + off), "story": hm(905 + off), "reel": hm(960 + off)}
+
 def run(c): subprocess.run(c, check=True)
 
 # Music: a licensed track from ../music (chosen by date), else a generated chord pad
@@ -111,4 +139,5 @@ run(["ffmpeg", "-y", "-loglevel", "error", *inputs, "-filter_complex", flt, "-ma
      "-r", "30", "-c:v", "libx264", "-profile:v", "high", "-preset", "veryfast", "-crf", "20", "-g", "60",
      "-c:a", "aac", "-b:a", "128k", "-ar", "48000", "-ac", "2", "-movflags", "+faststart", os.path.join(out, f"{prefix}-reel.mp4")])
 print(json.dumps({"slides": [os.path.basename(s) for s in slides], "photo": bool(photo), "reel": f"{prefix}-reel.mp4",
+                  "story": os.path.basename(story), "times": times,
                   "seconds": round(total, 1), "music": music_name}))

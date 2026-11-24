@@ -1,12 +1,13 @@
 # Daily mall run – Malls Worldwide (@malls_oftheworld)
 
-Goal: create ONE mall carousel (7 slides) + ONE reel for the target date and schedule both in Metricool. Everything in English.
+Goal: create ONE mall carousel (7 slides) + ONE "new post" story + ONE reel for the target date and schedule them in Metricool.
+Times vary a little each day (build.py prints them under "times": post 14:50-15:10, story +5 min, reel +60 min). Everything in English.
 Never post anything else. Never like, follow or comment.
 
 ## Steps
 0. Target date = the date given in the task prompt (normally tomorrow, Europe/Berlin).
    First call Metricool getScheduledPosts (blogId 8252854, Europe/Berlin) for the target date 14:00-17:00.
-   If a non-draft POST or REEL for 15:00/16:00 already exists, do NOT create new ones: log "already scheduled" and stop.
+   If a non-draft POST or REEL between 14:00 and 17:00 already exists, do NOT create new ones: log "already scheduled" and stop.
 1. Repo is ProjectShadowPages/malls-media (public, GitHub Pages: https://projectshadowpages.github.io/malls-media/).
 2. Read automation/malls-list.json. Pick a famous or interesting shopping mall/arcade that is NOT in the list
    (compare name and city). Vary countries/continents and types (historic arcade, mega mall, outlet, luxury, quirky).
@@ -62,11 +63,12 @@ Never post anything else. Never like, follow or comment.
 9. Wait until https://projectshadowpages.github.io/malls-media/media/<date>/<prefix>-01.jpg is online
    (about 1-3 min; Metricool fails if the file is not there yet). If you cannot check it directly, wait 3 minutes.
 10. Metricool (blogId 8252854, timezone Europe/Berlin), providers instagram + facebook, autoPublish true, draft false:
-   - 15:00 on target date: instagramData {"type":"POST"}, facebookData {"type":"POST"}, media = the 7 JPEG URLs,
+   - times.post on target date: instagramData {"type":"POST"}, facebookData {"type":"POST"}, media = the 7 JPEG URLs,
      mediaAltText one short line per slide, text = caption.txt content.
-   - 16:00 on target date: instagramData {"type":"REEL","showReelOnFeed":true}, facebookData {"type":"REEL","title":"<short title>"},
+   - times.story: instagramData {"type":"STORY"}, facebookData {"type":"STORY"}, media = <prefix>-story.jpg URL, NO text.
+   - times.reel on target date: instagramData {"type":"REEL","showReelOnFeed":true}, facebookData {"type":"REEL","title":"<short title>"},
      media = reel URL, text = short caption (keyword hook line + question + same hashtags).
-11. Write a result line to automation/runlog.md (date, mall, photo yes/no, handle, music, Metricool post ids, OK/ERROR) and push.
+11. Write a result line to automation/runlog.md (date, mall, photo yes/no, handle, music, times, Metricool ids of post/story/reel, OK/ERROR) and push.
 If any step fails: try once more. If it still fails, schedule nothing, write the error to runlog.md and push.
 
 ## Platforms

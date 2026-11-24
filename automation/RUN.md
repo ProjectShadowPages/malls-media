@@ -36,6 +36,7 @@ Never post anything else. Never like, follow or comment.
      If a photo is used, its credit line goes at the end of the caption (build.py adds it automatically).
      Write like a real person, short and natural: no filler words, no hype clichés ("nestled", "vibrant",
      "a must-visit", "whether you're…"), no long dashes, max ~60 words before the hashtags.
+   - sources: list of the URLs you took the facts from (needed for the check in step 7).
    - address: "<Name>\n<street, postcode city, country>".
    - HOOKS: before writing caption line 1, write 10 different hooks (each under 12 words; curiosity, bold claim
      or surprising number; each must be true). Rank them, take the best for caption line 1 and the reel caption,
@@ -49,6 +50,14 @@ Never post anything else. Never like, follow or comment.
    pip install pillow --break-system-packages; apt-get install -y ffmpeg if needed).
    build.py downloads the photo, builds 7 slides and a 9:16 reel (3 s per slide, music from /music if present).
 7. Look at the slides (open 3 JPEGs, including slide 2) to check that no text overflows and the photo shows the building.
+   INDEPENDENT CHECK (before anything is pushed or scheduled): start a SEPARATE fresh sub-agent with the Agent tool
+   (it must not have seen your work). Give it only: the image file paths, mall-<date>.json + caption.txt and the source URLs. Its task:
+   open every image and check (1) flag correct for the country (never looks like another country's flag),
+   (2) every number/name/date matches the sources (open them), (3) spelling and grammar, (4) no text cut off,
+   overlapping or overflowing, (5) photo shows the right place, credit present, (6) caption/headlines true, no clickbait.
+   It answers "PASS" or a numbered list of errors. Fix every error, rebuild, and run the check again (max 2 rounds).
+   If errors remain after 2 rounds: schedule nothing, log them in runlog.md. If no Agent tool exists, do the same
+   checklist yourself very carefully, image by image. Write "check: PASS" (or the fixes) into runlog.md.
 8. Append the mall to automation/malls-list.json. git add, commit, push to main.
 9. Wait until https://projectshadowpages.github.io/malls-media/media/<date>/<prefix>-01.jpg is online
    (about 1-3 min; Metricool fails if the file is not there yet). If you cannot check it directly, wait 3 minutes.

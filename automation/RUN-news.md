@@ -17,6 +17,14 @@ English. Nothing else: no posts, no likes/comments/follows.
 5. Run: cd automation && python3 news.py news-<date>.json   (pip install pillow --break-system-packages if missing)
 6. Wednesday or Saturday only: python3 news_reel.py <date> <the 4 story file names in order>
 7. Look at the images; nothing may overflow (source line must be one line).
+   INDEPENDENT CHECK (before anything is pushed or scheduled): start a SEPARATE fresh sub-agent with the Agent tool
+   (it must not have seen your work). Give it only: the image file paths, news-<date>.json (with the source URL of each item) and the source URLs. Its task:
+   open every image and check (1) flag correct for the country (never looks like another country's flag),
+   (2) every number/name/date matches the sources (open them), (3) spelling and grammar, (4) no text cut off,
+   overlapping or overflowing, (5) each article is really from the last 4 days, (6) caption/headlines true, no clickbait.
+   It answers "PASS" or a numbered list of errors. Fix every error, rebuild, and run the check again (max 2 rounds).
+   If errors remain after 2 rounds: schedule nothing, log them in runlog.md. If no Agent tool exists, do the same
+   checklist yourself very carefully, image by image. Write "check: PASS" (or the fixes) into runlog.md.
 8. Append the 4 items to automation/news-log.md (date, headline, source URL). git add, commit, push to main.
 9. Wait ~3 minutes until the files are online on GitHub Pages.
 10. Metricool (blogId 8252854, Europe/Berlin), providers instagram + facebook, autoPublish true, draft false:

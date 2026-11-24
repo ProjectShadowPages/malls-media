@@ -53,7 +53,7 @@ Never post anything else. Never like, follow or comment.
      If Metricool rejects the tag, schedule again without carouselTags but keep the mention. Write the handle (or "none") to runlog.md.
 6. Run: cd automation && python3 build.py mall-<date>.json   (needs Pillow + ffmpeg; install if missing:
    pip install pillow --break-system-packages; apt-get install -y ffmpeg if needed).
-   build.py downloads the photo, builds 7 slides and a 9:16 reel (3 s per slide, music from /music if present).
+   build.py downloads the photo, builds 7 slides and a 9:16 reel (first and last slide 3 s, content slides 5 s, about 29 s, music from /music).
 7. Look at the slides (open slide 1 and 2 more JPEGs) to check that no text overflows, the cover headline is readable on the photo and the photo shows this mall.
    INDEPENDENT CHECK (before anything is pushed or scheduled): start a SEPARATE fresh sub-agent with the Agent tool
    (it must not have seen your work). Give it only: the image file paths, mall-<date>.json + caption.txt and the source URLs. Its task:

@@ -109,13 +109,15 @@ times = {"post": hm(900 + off), "story": hm(905 + off), "reel": hm(960 + off)}
 def run(c): subprocess.run(c, check=True)
 
 # Music: a licensed track from ../music (chosen by date), else a generated chord pad
-dur, fade = 3.0, 0.4
-total = len(slides) * dur - (len(slides) - 1) * fade
+# Durations (Lars 24.11.): first and last slide 3 s, content slides 5 s (time to read)
+fade = 0.4
+durs = [3.0] + [5.0] * (len(slides) - 2) + [3.0]
+total = sum(durs) - (len(slides) - 1) * fade
 tracks = sorted(glob.glob(os.path.join(root, "music", "*.mp3")) + glob.glob(os.path.join(root, "music", "*.m4a")))
 music = f"{tmp}/music.m4a"
 if tracks:
     tr = tracks[int(m["date"].replace("-", "")) % len(tracks)]
-    run(["ffmpeg", "-y", "-loglevel", "error", "-ss", "5", "-i", tr, "-t", str(total + 1), "-c:a", "aac", "-b:a", "128k", "-ar", "48000", "-ac", "2", music])
+    run(["ffmpeg", "-y", "-loglevel", "error", "-stream_loop", "-1", "-ss", "5", "-i", tr, "-t", str(total + 1), "-c:a", "aac", "-b:a", "128k", "-ar", "48000", "-ac", "2", music])
     music_name = os.path.basename(tr)
 else:
     sets = [[(220, 261.63, 329.63), (174.61, 220, 261.63), (261.63, 329.63, 392), (196, 246.94, 293.66)],
@@ -140,10 +142,10 @@ for i, p in enumerate(slides, 1):
     bg.paste(s, (0, (RH - s.height) // 2))
     f = f"{tmp}/r{i}.png"; bg.save(f); frames.append(f)
 inputs = []
-for f in frames: inputs += ["-loop", "1", "-t", str(dur), "-i", f]
+for f, dd in zip(frames, durs): inputs += ["-loop", "1", "-t", str(dd), "-i", f]
 inputs += ["-i", music]; flt, last = "", "0:v"
 for i in range(1, len(frames)):
-    flt += f"[{last}][{i}:v]xfade=transition=fade:duration={fade}:offset={i*(dur-fade):.2f}[v{i}];"; last = f"v{i}"
+    flt += f"[{last}][{i}:v]xfade=transition=fade:duration={fade}:offset={sum(durs[:i]) - i*fade:.2f}[v{i}];"; last = f"v{i}"
 flt += f"[{last}]format=yuv420p[o];[{len(frames)}:a]atrim=0:{total:.2f},afade=t=in:d=0.5,afade=t=out:st={total-1.5:.2f}:d=1.5[a]"
 run(["ffmpeg", "-y", "-loglevel", "error", *inputs, "-filter_complex", flt, "-map", "[o]", "-map", "[a]",
      "-r", "30", "-c:v", "libx264", "-profile:v", "high", "-preset", "veryfast", "-crf", "20", "-g", "60",

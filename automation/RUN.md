@@ -32,7 +32,7 @@ Never post anything else. Never like, follow or comment.
      another country's flag.
    - caption (vary the writing style every day: sometimes a question first, sometimes a number, sometimes a short story):
      line 1 = hook WITH search keywords, e.g. "The shopping mall in Bangkok you can reach by boat 🇹🇭";
-     2-3 short sentences; a question with 👇; then "#mallsoftheworld" plus 3-4 hashtags that fit THIS mall
+     2-3 short sentences; a question with 👇 OR (about every second day) a share prompt like "Send this to the friend you would go with 👇"; then "#mallsoftheworld" plus 3-4 hashtags that fit THIS mall
      (city, country, special feature). Never repeat the same block. No banned or unrelated hashtags.
      If a photo is used, its credit line goes at the end of the caption (build.py adds it automatically).
      Write like a real person, short and natural: no filler words, no hype clichés ("nestled", "vibrant",

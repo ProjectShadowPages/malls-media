@@ -68,7 +68,9 @@ Never post anything else. Never like, follow or comment.
    (about 1-3 min; Metricool fails if the file is not there yet). If you cannot check it directly, wait 3 minutes.
 10. Metricool (blogId 8252854, timezone Europe/Berlin), providers instagram + facebook, autoPublish true, draft false:
    - times.post on target date: instagramData {"type":"POST"}, facebookData {"type":"POST"}, media = the 7 JPEG URLs,
-     mediaAltText one short line per slide, text = caption.txt content.
+     mediaAltText: TEST since 25.11. (Lars approved): send NO mediaAltText for this instagram/facebook carousel
+     (empty list) - we check if the warning "We restrict certain activity" disappears. Keep alt texts on the other platforms.
+     text = caption.txt content.
    - times.story: instagramData {"type":"STORY"}, facebookData {"type":"STORY"}, media = <prefix>-story.jpg URL, NO text.
    - times.reel on target date: instagramData {"type":"REEL","showReelOnFeed":true}, facebookData {"type":"REEL","title":"<short title>"},
      media = reel URL, text = short caption (keyword hook line + question + same hashtags).

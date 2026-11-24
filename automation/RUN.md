@@ -15,13 +15,17 @@ Never post anything else. Never like, follow or comment.
    (absurd attraction, size in human terms, weird detail ...). Remove a used lead from that file.
 3. Research it on the web. Use only facts you found in at least one reliable source (Wikipedia, official site,
    major newspaper). No guessing. Keep numbers exact as in the source.
-4. Photo of the building (outside view) for slide 2:
-   cd automation && python3 find_photo.py "<mall name> <city>"   (try also "<mall name> exterior" / "<mall name> building")
-   Choose ONE candidate that clearly shows the building from OUTSIDE (judge by title/description), landscape or square,
-   width >= 1200. Only the free licences the script lists (CC0, public domain, CC BY, CC BY-SA).
-   credit = "Photo: <author> / Wikimedia Commons, <licence>". If nothing suitable: no photo (then 5 content slides).
+4. COVER PHOTO (slide 1, approved by Lars 24.11.): the most striking photo of the mall - the famous attraction,
+   the spectacular interior or the iconic outside view (whatever makes people stop scrolling):
+   cd automation && python3 find_photo.py "<mall name> <city>"   (try also "<mall name> interior", "<attraction> <mall name>")
+   Choose ONE candidate: sharp, bright, width >= 1200, clearly this mall (judge by title/description), no close-up
+   faces of identifiable people. Only the free licences the script lists (CC0, public domain, CC BY, CC BY-SA); prefer CC0/PD.
+   credit = "Photo: <author> / Wikimedia Commons, <licence>". If nothing suitable: no photo (then the black title slide is used).
 5. Write automation/mall-<date>.json (format: see docstring in automation/build.py). Rules:
-   - Always 7 slides in total: with photo = 4 content slides, without photo = 5 content slides.
+   - Always 7 slides: slide 1 (photo cover, or black title slide without photo) + 5 content slides + end slide.
+   - cover: 2-4 short UPPERCASE lines that form the hook (true, no clickbait, max ~14 characters per line),
+     the line with the key words starts with "*" (shown in yellow), e.g. ["THE MALL WITH", "AN INDOOR", "*WAVE POOL"].
+     It should match the winning hook (see HOOKS) and the photo.
    - First content slide "QUICK FACTS" with 3-4 short bullet facts. Others: one surprising fact/story each.
    - Headlines max ~35 characters, body short (max ~180 characters per slide).
    - accent: vary it day by day (gold, teal, coral, violet, sky blue, lime ... never the same as yesterday).
@@ -50,7 +54,7 @@ Never post anything else. Never like, follow or comment.
 6. Run: cd automation && python3 build.py mall-<date>.json   (needs Pillow + ffmpeg; install if missing:
    pip install pillow --break-system-packages; apt-get install -y ffmpeg if needed).
    build.py downloads the photo, builds 7 slides and a 9:16 reel (3 s per slide, music from /music if present).
-7. Look at the slides (open 3 JPEGs, including slide 2) to check that no text overflows and the photo shows the building.
+7. Look at the slides (open slide 1 and 2 more JPEGs) to check that no text overflows, the cover headline is readable on the photo and the photo shows this mall.
    INDEPENDENT CHECK (before anything is pushed or scheduled): start a SEPARATE fresh sub-agent with the Agent tool
    (it must not have seen your work). Give it only: the image file paths, mall-<date>.json + caption.txt and the source URLs. Its task:
    open every image and check (1) flag correct for the country (never looks like another country's flag),

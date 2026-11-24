@@ -4,11 +4,11 @@ mall.json fields:
   date (YYYY-MM-DD), slug, name, city, country,
   flag (known name like "france" OR {"h":[[r,g,b],...]} / {"v":[[r,g,b],...]}),
   accent [r,g,b], icon (dome|circle|wave|box|fish|cart|gem|roof),
-  slides: list of [kicker, headline, [body lines]]
-          -> 5 items without photo, 4 items with photo (always 7 slides in total)
+  slides: list of [kicker, headline, [body lines]] -> always 5 items (7 slides: cover/title + 5 + end)
   photo (optional): {"url": "https://upload.wikimedia.org/...jpg (original file URL)",
-                     "kicker": "THE BUILDING", "line": "short line about the outside view",
                      "credit": "Photo: <author> / Wikimedia Commons, <licence>"}
+  cover (with photo): 2-4 short UPPERCASE headline lines, the key words line starts with "*" (yellow),
+                     e.g. ["THE MALL WITH", "AN INDOOR", "*WAVE POOL"]. Photo becomes slide 1.
   caption (English), address (2 lines)
 Output: ../media/<date>/<prefix>-01.jpg ... , <prefix>-reel.mp4, caption.txt
 """
@@ -37,6 +37,11 @@ def fetch_commons(url, dest):
                     open(dest, "wb").write(data); return True
             except Exception:
                 pass
+            try:  # fallback: curl (works better behind some proxies)
+                subprocess.run(["curl", "-s", "-f", "-A", UA, "-o", dest, u], check=True, timeout=60)
+                if open(dest, "rb").read(4)[:3] == b"\xff\xd8\xff": return True
+            except Exception:
+                pass
             time.sleep(3)
     return False
 
@@ -52,11 +57,16 @@ tmp = f"/tmp/build_{prefix}"; os.makedirs(tmp, exist_ok=True)
 photo = m.get("photo")
 if photo and not fetch_commons(photo["url"], f"{tmp}/photo.jpg"):
     print("WARNING: photo download failed - building without photo slide"); photo = None
-content = m["slides"][:4] if photo else m["slides"][:5]
-n = len(content) + 2 + (1 if photo else 0)
-imgs = [render.title_slide(m, n)]
-if photo:
-    imgs.append(render.photo_slide(m, 2, n, f"{tmp}/photo.jpg", photo.get("kicker", "THE BUILDING"), photo["line"], photo["credit"]))
+content = m["slides"][:5]
+n = len(content) + 2
+cover = m.get("cover")
+if photo and cover:
+    imgs = [render.cover_slide(m, n, f"{tmp}/photo.jpg", cover, photo.get("credit", ""))]
+elif photo:  # old style: title slide + photo slide
+    content = m["slides"][:4]; n = len(content) + 3
+    imgs = [render.title_slide(m, n), render.photo_slide(m, 2, n, f"{tmp}/photo.jpg", photo.get("kicker", "THE BUILDING"), photo["line"], photo["credit"])]
+else:
+    imgs = [render.title_slide(m, n)]
 start = len(imgs) + 1
 imgs += [render.content_slide(m, start + i, n, *s) for i, s in enumerate(content)]
 imgs.append(render.end_slide(m, n))
@@ -72,7 +82,7 @@ open(os.path.join(out, "caption.txt"), "w").write(cap + "\n\n\n" + m["address"] 
 def new_post_story():
     from PIL import ImageDraw
     SW, SH = 1080, 1920
-    src = Image.open(slides[1] if photo else slides[0]).convert("RGB")
+    src = Image.open(slides[0]).convert("RGB")
     r = max(SW / src.width, SH / src.height); bg = src.resize((int(src.width * r) + 1, int(src.height * r) + 1))
     bg = bg.crop(((bg.width - SW) // 2, (bg.height - SH) // 2, (bg.width - SW) // 2 + SW, (bg.height - SH) // 2 + SH))
     bg = ImageEnhance.Brightness(bg.filter(ImageFilter.GaussianBlur(40))).enhance(0.4)

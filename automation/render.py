@@ -167,6 +167,43 @@ def photo_slide(m, idx, n, photo, kicker, line, credit):
         d.text((M, cy), l, font=cf, fill=(170, 170, 170)); cy += 30
     footer(d, idx, n, m["accent"]); return im
 
+def cover_slide(m, n, photo, lines, credit):
+    """Photo cover: full-bleed photo, dark gradient, big headline (line starting with * = yellow)."""
+    im = Image.open(photo).convert("RGB")
+    r = max(W / im.width, H / im.height); im = im.resize((int(im.width * r) + 1, int(im.height * r) + 1))
+    x0 = (im.width - W) // 2; y0 = max(0, (im.height - H) // 3)
+    im = im.crop((x0, y0, x0 + W, y0 + H))
+    black = Image.new("RGB", (W, H), (0, 0, 0))
+    g = Image.new("L", (1, H))
+    for y in range(H): g.putpixel((0, y), int(240 * min(1, max(0, (y - H * 0.30) / (H * 0.45)))))
+    im = Image.composite(black, im, g.resize((W, H)))
+    t = Image.new("L", (1, H))
+    for y in range(H): t.putpixel((0, y), int(150 * max(0, 1 - y / 260)))
+    im = Image.composite(black, im, t.resize((W, H)))
+    logo = Image.open(os.path.join(BASE, "logo.png")).convert("RGB").resize((150, 150))
+    mk = Image.new("L", (150, 150), 0); ImageDraw.Draw(mk).ellipse((0, 0, 149, 149), fill=255)
+    im.paste(logo, (50, 40), mk)
+    fl = flag(m["flag"], 120, 80); im.paste(fl, (W - 170, 75))
+    d = ImageDraw.Draw(im); YEL = (255, 214, 0)
+    clean = [l.lstrip("*") for l in lines][:4]
+    size = 112
+    while size > 60 and max(d.textlength(l, font=font("ExtraBold", size)) for l in clean) > W - 132: size -= 4
+    f = font("ExtraBold", size); lh = int(size * 1.09)
+    sub = f"{m['name']} \u00b7 {m['city']}, {m['country']}"; sf = font("Medium", 40)
+    while d.textlength(sub, font=sf) > W - 140: sub = f"{m['name']} \u00b7 {m['country']}"; break
+    y_end = H - 150 - (30 if credit else 0)
+    y = y_end - 70 - lh * len(clean)
+    d.text((70, y - 60), "MALL OF THE DAY", font=font("ExtraBold", 40), fill=m["accent"])
+    for raw, l in zip(lines, clean):
+        d.text((66, y), l, font=f, fill=YEL if raw.startswith("*") else WHITE); y += lh
+    d.text((70, y + 16), sub, font=sf, fill=(230, 230, 230))
+    if credit:
+        d.text((70, H - 118), credit, font=font("Medium", 22), fill=(170, 170, 170))
+    d.text((70, H - 76), "@malls_oftheworld", font=font("Medium", 28), fill=(200, 200, 200))
+    s = font("ExtraBold", 34); t = "SWIPE  \u2192"
+    d.text((W - 70 - d.textlength(t, font=s), H - 80), t, font=s, fill=WHITE)
+    return im
+
 def content_slide(m, idx, n, kicker, head, body):
     im = Image.new("RGB", (W, H), (0, 0, 0)); d = ImageDraw.Draw(im)
     fl = flag(m["flag"], 96, 64); im.paste(fl, (W - M - 96, 100))

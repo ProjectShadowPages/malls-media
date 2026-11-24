@@ -72,6 +72,7 @@ Never post anything else. Never like, follow or comment.
      (empty list) - we check if the warning "We restrict certain activity" disappears. Keep alt texts on the other platforms.
      text = caption.txt content.
    - times.story: instagramData {"type":"STORY"}, facebookData {"type":"STORY"}, media = <prefix>-story.jpg URL, NO text.
+   - times.reel_story: instagramData {"type":"STORY"}, facebookData {"type":"STORY"}, media = <prefix>-story-reel.jpg URL, NO text.
    - times.reel on target date: instagramData {"type":"REEL","showReelOnFeed":true}, facebookData {"type":"REEL","title":"<short title>"},
      media = reel URL, text = short caption (keyword hook line + question + same hashtags).
    Extra platforms (tested OK 24.11.), each a SEPARATE scheduled post with its own text (never copy the IG caption 1:1):

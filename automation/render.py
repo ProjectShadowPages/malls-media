@@ -80,6 +80,12 @@ def flag(kind, w=300, h=200):
         s = h * 0.055
         for sx, sy in ((h*0.08, h*0.09), (h*0.08, h*0.91), (tw - h*0.11, h/2)):
             star(d, sx, sy, s, gold)
+    elif kind == "qatar":
+        d.rectangle([0, 0, w, h], fill=(138, 21, 56))
+        a, b = w * 0.25, w * 0.37; pts = [(0, 0), (a, 0)]
+        for i in range(9):
+            pts += [(b, (i + 0.5) * h / 9), (a, (i + 1) * h / 9)]
+        pts += [(0, h)]; d.polygon(pts, fill=WHITE)
     elif kind == "poland":
         d.rectangle([0, h/2, w, h], fill=(220, 20, 60))
     return im
@@ -230,7 +236,13 @@ def content_slide(m, idx, n, kicker, head, body):
         d.text((M, y), l, font=hf, fill=WHITE); y += 94
     y += 24; d.rectangle([M, y, M + 140, y + 9], fill=m["accent"]); y += 70
     bf = font("Medium", 48); bullet = len(body) > 1
+    bullet = len([p for p in body if not p.rstrip().endswith("\u2192")]) > 1
     for para in body:
+        if para.rstrip().endswith("\u2192"):  # teaser line (Lars 25.11.): no bullet, accent colour
+            tf = font("Bold", 46); y += 10
+            for l in wrap(d, para, tf, W - 2*M):
+                d.text((M, y), l, font=tf, fill=m["accent"]); y += 62
+            continue
         lines = wrap(d, para, bf, W - 2*M - (50 if bullet else 0))
         for j, l in enumerate(lines):
             if bullet and j == 0:

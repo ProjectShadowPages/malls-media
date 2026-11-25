@@ -260,6 +260,11 @@
       "name": "SM Mall of Asia",
       "city": "Pasay",
       "country": "Philippines"
+    },
+    {
+      "name": "Villaggio Mall",
+      "city": "Doha",
+      "country": "Qatar"
     }
   ]
 }

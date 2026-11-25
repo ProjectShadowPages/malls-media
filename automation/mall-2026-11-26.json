@@ -1,0 +1,30 @@
+{
+  "date": "2026-11-26",
+  "slug": "villaggio",
+  "name": "Villaggio Mall",
+  "city": "Doha",
+  "country": "Qatar",
+  "flag": "qatar",
+  "accent": [90, 180, 240],
+  "icon": "wave",
+  "cover": ["THE DOHA MALL", "WITH ITS OWN", "*VENICE CANAL"],
+  "slides": [
+    ["QUICK FACTS", "Villaggio Mall at a glance", ["Opened 7 June 2006", "220 stores and services", "125,000 m² of retail, all on one floor", "Built for the 2006 Asian Games", "Now meet the canal →"]],
+    ["THE CANAL", "A 150-metre canal, indoors", ["A 150-metre indoor canal runs through the mall. Gondolas carry shoppers along one wing.", "Then look up →"]],
+    ["THE CEILING", "Look up. That sky isn't real.", ["Above the Venetian-style shopfronts, the ceiling is painted as a blue sky full of clouds.", "And yes, there's ice →"]],
+    ["GONDOLANIA", "Olympic-size ice in the desert", ["The indoor theme park Gondolania has Qatar's only Olympic-size ice rink, plus a roller coaster, go-karts and bowling.", "Where the gondolas stop →"]],
+    ["VIA DOMO", "A gondola ride to Gucci", ["The gondolas drop shoppers at Via Domo, a luxury street with Dior, Gucci, Louis Vuitton, Bulgari and Cartier."]]
+  ],
+  "photo": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/3/33/Doha%2C_Villaggio_mall.jpg",
+    "credit": "Photo: Preacher lad / Wikimedia Commons, CC BY-SA 4.0"
+  },
+  "caption": "The Doha mall with a 150-metre Venice canal inside 🇶🇦\n\nVillaggio Mall opened in Qatar's Aspire Zone in 2006. Gondolas glide along an indoor canal under a painted sky to Via Domo, home of Gucci and Cartier. There's even an Olympic-size ice rink.\n\nWould you take the gondola or just walk? 👇\n\n#mallsoftheworld #villaggiomall #doha #qatar #gondola",
+  "address": "Villaggio Mall\nAl Waab Street, Aspire Zone, Doha, Qatar",
+  "sources": [
+    "https://wikiwand.com/en/Villagio_Mall",
+    "https://www.malls.com/malls/villagio/",
+    "https://visitqatar.com/intl-en/things-to-do/shopping/malls/villaggio-mall",
+    "https://commons.wikimedia.org/wiki/File:Doha,_Villaggio_mall.jpg"
+  ]
+}

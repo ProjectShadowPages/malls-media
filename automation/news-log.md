@@ -13,3 +13,7 @@
 - 2026-11-24 | Fewer Thanksgiving shoppers expected (NRF 182.7M) | https://www.retaildive.com/news/black-friday-cyber-monday-shopping-projected-to-slip/875473/
 - 2026-11-24 | AAPE opens first India store, Ambience Mall Vasant Kunj | https://indiaeducationdiary.in/aape-by-a-bathing-ape-makes-its-india-debut-at-ambience-mall-vasant-kunj/
 - 2026-11-24 | Manila malls set holiday hours | https://primer.com.ph/blog/2026/11/24/list-holiday-mall-hours-in-metro-manila-2026-for-christmas-and-new-year/
+- 2026-11-25 | US malls make a holiday comeback (ICSC 84% in store) | https://www.investing.com/news/stock-market-news/us-malls-make-a-holiday-comeback-as-shoppers-seek-more-than-deals-5047620
+- 2026-11-25 | New-look Apple Store at The Oracle, Reading (3 Dec) | https://www.macrumors.com/2026/11/23/new-apple-store-at-the-oracle/
+- 2026-11-25 | St David's Cardiff new stores + Xmas plans | https://nation.cymru/culture/wales-biggest-shopping-centre-reveals-new-store-openings-and-xmas-plans/
+- 2026-11-25 | The Paper Bunny first Indonesia store, Jakarta | https://retailnews.asia/the-paper-bunny-opens-first-store-in-indonesia

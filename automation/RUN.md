@@ -72,8 +72,10 @@ Never post anything else. Never like, follow or comment.
    (about 1-3 min; Metricool fails if the file is not there yet). If you cannot check it directly, wait 3 minutes.
 10. Metricool (blogId 8252854, timezone Europe/Berlin), providers instagram + facebook, autoPublish true, draft false:
    - times.post on target date: instagramData {"type":"POST"}, facebookData {"type":"POST"}, media = the 7 JPEG URLs,
-     mediaAltText: TEST since 25.11. (Lars approved): send NO mediaAltText for this instagram/facebook carousel
-     (empty list) - we check if the warning "We restrict certain activity" disappears. Keep alt texts on the other platforms.
+     mediaAltText: one short, honest, keyword-rich alt text per slide (mall name, city, what the slide shows).
+     Note (25.11.): Metricool often reports "ERROR: We restrict certain activity" for IG carousels, but Lars checked:
+     ALL carousels are live on Instagram. It is a follow-up step that fails, not the post. Alt texts were not the cause.
+     Do not retry or re-post a carousel because of this message (that would create a duplicate).
      text = caption.txt content.
      firstCommentText (Lars 24./25.11.): ONE short question as our own first comment that invites answers and
      contains a search keyword (mall name or city), e.g. "Have you been to SM Mall of Asia? Which mall in Manila

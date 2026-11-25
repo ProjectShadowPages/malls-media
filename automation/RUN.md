@@ -71,6 +71,9 @@ Never post anything else. Never like, follow or comment.
      mediaAltText: TEST since 25.11. (Lars approved): send NO mediaAltText for this instagram/facebook carousel
      (empty list) - we check if the warning "We restrict certain activity" disappears. Keep alt texts on the other platforms.
      text = caption.txt content.
+     firstCommentText (Lars 24./25.11.): ONE short question as our own first comment that invites answers and
+     contains a search keyword (mall name or city), e.g. "Have you been to SM Mall of Asia? Which mall in Manila
+     is your favorite? 👇". Different from the caption question, no hashtags, max ~120 characters.
    - times.story: instagramData {"type":"STORY"}, facebookData {"type":"STORY"}, media = <prefix>-story.jpg URL, NO text.
    - times.reel_story: instagramData {"type":"STORY"}, facebookData {"type":"STORY"}, media = <prefix>-story-reel.jpg URL, NO text.
    - times.reel on target date: instagramData {"type":"REEL","showReelOnFeed":true}, facebookData {"type":"REEL","title":"<short title>"},

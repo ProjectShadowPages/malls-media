@@ -28,6 +28,9 @@ Never post anything else. Never like, follow or comment.
      It should match the winning hook (see HOOKS) and the photo.
    - First content slide "QUICK FACTS" with 3-4 short bullet facts. Others: one surprising fact/story each.
    - Headlines max ~35 characters, body short (max ~180 characters per slide).
+   - Keep people swiping (Lars 25.11.): content slides 2-5 end with a very short true teaser to the next slide
+     (max ~6 words, e.g. "But the real surprise is underground →"); slide 6 (last content slide) ends without teaser.
+     Teaser counts into the 180 characters.
    - accent: vary it day by day (gold, teal, coral, violet, sky blue, lime ... never the same as yesterday).
    - flag: a known name (italy, iceland, denmark, japan, pakistan, nigeria, thailand, russia, kuwait, poland, france)
      or simple stripes {"h":[[r,g,b],...]} / {"v":[[r,g,b],...]}. Known names also: canada.
@@ -43,7 +46,8 @@ Never post anything else. Never like, follow or comment.
      "a must-visit", "whether you're…"), no long dashes, max ~60 words before the hashtags.
    - sources: list of the URLs you took the facts from (needed for the check in step 7).
    - address: "<Name>\n<street, postcode city, country>".
-   - HOOKS: before writing caption line 1, write 10 different hooks (each under 12 words; curiosity, bold claim
+   - HOOKS: before writing caption line 1, write 10 different hooks spread over 4 types (Lars 25.11.): SUSPENSE, CONTRADICTION to what people expect,
+     FEELING of the visitor, OPEN QUESTION (each under 12 words; curiosity, bold claim
      or surprising number; each must be true). Rank them, take the best for caption line 1 and the reel caption,
      the second best as headline of the most surprising slide. Keep search keywords (mall, city) in line 1.
      Write the winning hook into runlog.md.
@@ -59,7 +63,7 @@ Never post anything else. Never like, follow or comment.
    (it must not have seen your work). Give it only: the image file paths, mall-<date>.json + caption.txt and the source URLs. Its task:
    open every image and check (1) flag correct for the country (never looks like another country's flag),
    (2) every number/name/date matches the sources (open them), (3) spelling and grammar, (4) no text cut off,
-   overlapping or overflowing, (5) photo shows the right place, credit present, (6) caption/headlines true, no clickbait.
+   overlapping or overflowing, (5) photo shows the right place, credit present, (6) caption/headlines true, no clickbait, (7) every content slide makes you want to swipe to the next (teaser present on slides 2-5, nothing boring or repeated).
    It answers "PASS" or a numbered list of errors. Fix every error, rebuild, and run the check again (max 2 rounds).
    If errors remain after 2 rounds: schedule nothing, log them in runlog.md. If no Agent tool exists, do the same
    checklist yourself very carefully, image by image. Write "check: PASS" (or the fixes) into runlog.md.

@@ -202,10 +202,10 @@ def cover_slide(m, n, photo, lines, credit):
     t = Image.new("L", (1, H))
     for y in range(H): t.putpixel((0, y), int(150 * max(0, 1 - y / 260)))
     im = Image.composite(black, im, t.resize((W, H)))
-    logo = Image.open(os.path.join(BASE, "logo.png")).convert("RGB").resize((150, 150))
-    mk = Image.new("L", (150, 150), 0); ImageDraw.Draw(mk).ellipse((0, 0, 149, 149), fill=255)
-    im.paste(logo, (50, 40), mk)
-    fl = flag(m["flag"], 120, 80); im.paste(fl, (W - 170, 75))
+    logo = Image.open(os.path.join(BASE, "logo.png")).convert("RGB").resize((220, 220))
+    mk = Image.new("L", (220, 220), 0); ImageDraw.Draw(mk).ellipse((0, 0, 219, 219), fill=255)
+    im.paste(logo, (45, 35), mk)
+    fl = flag(m["flag"], 180, 120); im.paste(fl, (W - 225, 85))
     d = ImageDraw.Draw(im); YEL = (255, 214, 0)
     clean = [l.lstrip("*") for l in lines][:4]
     size = 112
@@ -228,8 +228,8 @@ def cover_slide(m, n, photo, lines, credit):
 
 def content_slide(m, idx, n, kicker, head, body):
     im = Image.new("RGB", (W, H), (0, 0, 0)); d = ImageDraw.Draw(im)
-    fl = flag(m["flag"], 96, 64); im.paste(fl, (W - M - 96, 100))
-    d.rectangle([W - M - 97, 99, W - M, 164], outline=WHITE, width=1)
+    fl = flag(m["flag"], 138, 92); im.paste(fl, (W - M - 138, 86))
+    d.rectangle([W - M - 139, 85, W - M, 178], outline=WHITE, width=1)
     d.text((M, 108), kicker, font=font("Bold", 38), fill=m["accent"])
     y = 260; hf = font("ExtraBold", 80)
     for l in wrap(d, head, hf, W - 2*M):

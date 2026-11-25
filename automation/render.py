@@ -260,7 +260,7 @@ def end_slide(m, n):
         d.text(((W - d.textlength(l, font=f))/2, y), l, font=f, fill=WHITE); y += 86
     y += 30; d.rectangle([W/2 - 90, y, W/2 + 90, y + 8], fill=m["accent"]); y += 50
     f2 = font("SemiBold", 44)
-    for l in ["Follow @malls_oftheworld", "Would you visit? Comment below!"]:
+    for l in ["Follow @malls_oftheworld", "Would you visit?"]:
         d.text(((W - d.textlength(l, font=f2))/2, y), l, font=f2, fill=WHITE); y += 66
     footer(d, n, n, m["accent"]); return im
 

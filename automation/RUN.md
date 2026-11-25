@@ -45,7 +45,7 @@ Never post anything else. Never like, follow or comment.
      Write like a real person, short and natural: no filler words, no hype clichés ("nestled", "vibrant",
      "a must-visit", "whether you're…"), no long dashes, max ~60 words before the hashtags.
    - sources: list of the URLs you took the facts from (needed for the check in step 7).
-   - address: "<Name>\n<street, postcode city, country>".
+   - address: "<Name>\n<street, postcode city, country>". (Slides only; since 25.11. NOT in the caption - test against the Instagram carousel error.)
    - HOOKS: before writing caption line 1, write 10 different hooks spread over 4 types (Lars 25.11.): SUSPENSE, CONTRADICTION to what people expect,
      FEELING of the visitor, OPEN QUESTION (each under 12 words; curiosity, bold claim
      or surprising number; each must be true). Rank them, take the best for caption line 1 and the reel caption,

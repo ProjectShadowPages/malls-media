@@ -76,7 +76,8 @@ for i, im in enumerate(imgs, 1):
 cap = m["caption"]
 if photo and photo["credit"] not in cap:
     cap += "\n\n" + photo["credit"]
-open(os.path.join(out, "caption.txt"), "w").write(cap + "\n\n\n" + m["address"] + "\n")
+# TEST since 25.11.: no address block in the caption (IG carousels with it failed: "We restrict certain activity")
+open(os.path.join(out, "caption.txt"), "w").write(cap + "\n")
 
 # Story "New post" (9:16): blurred background, title slide in the middle, label on top
 def new_post_story(label="NEW POST", sub=None, fname="story"):

@@ -17,3 +17,7 @@
 - 2026-11-25 | New-look Apple Store at The Oracle, Reading (3 Dec) | https://www.macrumors.com/2026/11/23/new-apple-store-at-the-oracle/
 - 2026-11-25 | St David's Cardiff new stores + Xmas plans | https://nation.cymru/culture/wales-biggest-shopping-centre-reveals-new-store-openings-and-xmas-plans/
 - 2026-11-25 | The Paper Bunny first Indonesia store, Jakarta | https://retailnews.asia/the-paper-bunny-opens-first-store-in-indonesia
+- 2026-11-26 | Ayala Malls Nuvali opens new chapter (expansion) | https://www.manilatimes.net/2026/11/22/tmt-newswire/better-days-start-here-ayala-malls-nuvali-continues-to-evolve-with-its-newest-chapter/2475439
+- 2026-11-26 | 650,000 balloons fill Russian malls (Park House) | https://www.malls.ru/rus/news/650-tysyach-vozdushnykh-sharov-atriumy-seti-park-khaus-prevratilis-v-masshtabnye-art-ekspozitsii.shtml
+- 2026-11-26 | Jacksonville malls open early Black Friday | https://www.news4jax.com/news/local/2026/11/25/heres-a-list-of-when-northeast-florida-malls-major-stores-will-open/
+- 2026-11-26 | Canadians trim holiday budgets (RCC $911, -6.5%) | https://retail-insider.com/retail-insider/2026/11/daily-synopsis-november-23-2026/

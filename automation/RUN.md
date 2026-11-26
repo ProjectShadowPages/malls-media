@@ -28,9 +28,6 @@ Never post anything else. Never like, follow or comment.
      It should match the winning hook (see HOOKS) and the photo.
    - First content slide "QUICK FACTS" with 3-4 short bullet facts. Others: one surprising fact/story each.
    - Headlines max ~35 characters, body short (max ~180 characters per slide).
-   - Key word in yellow (Lars 26.11.): in EVERY content-slide headline mark exactly ONE key word or number with stars,
-     e.g. "A *150-metre* canal with gondolas" or "Look up: the sky is *painted*" (max 2 words inside the stars;
-     for multi-word: "*Olympic-size* ice rink"). Stars are not shown, the words turn yellow. Never in the body.
    - Keep people swiping (Lars 25.11.): content slides 2-5 end with a very short true teaser to the next slide
      (max ~6 words, e.g. "But the real surprise is underground →"); slide 6 (last content slide) ends without teaser.
      Teaser counts into the 180 characters.

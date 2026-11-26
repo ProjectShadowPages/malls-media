@@ -226,36 +226,14 @@ def cover_slide(m, n, photo, lines, credit):
     d.text((W - 70 - d.textlength(t, font=s), H - 80), t, font=s, fill=WHITE)
     return im
 
-YELLOW = (255, 214, 0)
-def draw_marked(d, x, y, text, f, maxw, lh, base=WHITE, hi=YELLOW):
-    """Draw text with *highlighted words* (Lars 26.11.: one key word per content slide in yellow). Returns new y."""
-    words, on = [], False
-    for w in text.split(" "):
-        start = w.startswith("*"); end = w.endswith("*") and len(w) > 1
-        if start: on = True
-        words.append((w.strip("*"), on))
-        if end or (start and w.endswith("*") and len(w) > 2): on = False
-    line, lines = [], []
-    for w, c in words:
-        test = " ".join(t for t, _ in line + [(w, c)])
-        if line and d.textlength(test, font=f) > maxw: lines.append(line); line = []
-        line.append((w, c))
-    if line: lines.append(line)
-    sp = d.textlength(" ", font=f)
-    for ln in lines:
-        cx = x
-        for w, c in ln:
-            d.text((cx, y), w, font=f, fill=hi if c else base); cx += d.textlength(w, font=f) + sp
-        y += lh
-    return y
-
 def content_slide(m, idx, n, kicker, head, body):
     im = Image.new("RGB", (W, H), (0, 0, 0)); d = ImageDraw.Draw(im)
     fl = flag(m["flag"], 138, 92); im.paste(fl, (W - M - 138, 86))
     d.rectangle([W - M - 139, 85, W - M, 178], outline=WHITE, width=1)
     d.text((M, 108), kicker, font=font("Bold", 38), fill=m["accent"])
     y = 260; hf = font("ExtraBold", 80)
-    y = draw_marked(d, M, y, head, hf, W - 2*M, 94)
+    for l in wrap(d, head, hf, W - 2*M):
+        d.text((M, y), l, font=hf, fill=WHITE); y += 94
     y += 24; d.rectangle([M, y, M + 140, y + 9], fill=m["accent"]); y += 70
     bf = font("Medium", 48); bullet = len(body) > 1
     bullet = len([p for p in body if not p.rstrip().endswith("\u2192")]) > 1

@@ -37,5 +37,9 @@ English. Nothing else: no posts, no likes/comments/follows.
       at 03:00, 09:00, 15:00, 21:00 (if a time is already in the past when you run, skip only that slot).
     - Wed/Sat: reel at 21:30: instagramData {"type":"REEL","showReelOnFeed":true}, facebookData {"type":"REEL","title":"Mall news"},
       text = "Mall news from around the world 🗞️" + one line per news item + a question + "#mallsoftheworld #mallnews #shopping #retailnews".
+    - Wed/Sat also the SAME news reel as a YouTube Short at 21:40 (Lars 26.11.): provider youtube, youtubeData
+      {"title":"Mall news: <most interesting headline> #shorts" (max 100 chars),"type":"short","privacy":"public",
+      "tags":["mall news","shopping malls","retail news","malls of the world"],"category":"TRAVEL_EVENTS","madeForKids":false,"isAiGeneratedContent":false}, text = one line per news item (with source names)
+      + a genuine question + "#mallnews #shopping #shorts".
 11. Append a result line to automation/runlog.md (date, "NEWS", headlines, reel yes/no, Metricool ids, OK/ERROR) and push.
 If a step fails twice: schedule nothing, log the error, push.

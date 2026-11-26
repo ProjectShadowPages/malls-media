@@ -97,6 +97,13 @@ Never post anything else. Never like, follow or comment.
      "type":"short","privacy":"public","tags":[mall, city, country, "shopping mall", "malls of the world"],
      "category":"TRAVEL_EVENTS","madeForKids":false,"isAiGeneratedContent":false}, text = 2-3 sentences + question
      + credit + "#shoppingmall #<city> #shorts".
+   - Pinterest EXTRA pins (Lars 26.11.: 2 more fresh pins per mall, spread over the day): post + 3 h and post + 7 h,
+     same board/pinLink/flags as above, each with ONE different content slide (pick the 2 most visual of slides 2-6,
+     e.g. the photo/feature slides) and its OWN pinTitle (a different angle, max 100 chars) and OWN SEO description.
+     Never the same image twice; never slide 7.
+   - Threads TEXT post (Lars 26.11.): post + 4 h, provider threads, NO media, text = one surprising true fact about the
+     mall that was NOT in the morning caption + one genuine open question (no "comment/share/tag" asks), max ~280 chars,
+     no hashtag or exactly one topic tag. Purpose: start a conversation.
    If one extra platform fails, still schedule the others and log the error.
 11. Write a result line to automation/runlog.md (date, mall, photo yes/no, handle, music, times, Metricool ids of post/story/reel/threads/bluesky/pinterest/youtube, OK/ERROR) and push.
 If any step fails: try once more. If it still fails, schedule nothing, write the error to runlog.md and push.

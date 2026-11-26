@@ -104,7 +104,7 @@ story = new_post_story()
 reel_story = new_post_story("NEW REEL", f"30 seconds: {m['name']}", "story-reel")
 
 # Publication times vary a little per day (against "template" look): post 14:50-15:10, story +5 min, reel +60 min
-off = int(m["date"].replace("-", "")) * 13 % 21 - 10
+off = int(m["date"].replace("-", "")) * 13 % 61 - 30  # post between 14:30 and 15:30 (Lars 26.11.)
 def hm(mins): return f"{mins // 60:02d}:{mins % 60:02d}"
 times = {"post": hm(900 + off), "story": hm(905 + off), "reel": hm(960 + off), "reel_story": hm(965 + off)}
 

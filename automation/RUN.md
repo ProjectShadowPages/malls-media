@@ -53,7 +53,7 @@ Never post anything else. Never like, follow or comment.
      Write the winning hook into runlog.md.
    - Instagram handle of the mall: look for the official Instagram link on the mall's OFFICIAL website (footer/contact).
      Only if it is clearly linked there: mention it once in the caption ("📍 @handle") and tag it on slide 1
-     (instagramData.carouselTags {"0":[{"username":"handle","x":0.5,"y":0.5}]}). Never guess a handle.
+     (instagramData.carouselTags {"0":[{"username":"handle","x":0.5,"y":0.5}]}). Never guess a handle. Handles listed in automation/mall-handles.md (confirmed by Lars) count as verified.
      If Metricool rejects the tag, schedule again without carouselTags but keep the mention. Write the handle (or "none") to runlog.md.
 6. Run: cd automation && python3 build.py mall-<date>.json   (needs Pillow + ffmpeg; install if missing:
    pip install pillow --break-system-packages; apt-get install -y ffmpeg if needed).

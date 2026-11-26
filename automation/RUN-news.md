@@ -15,6 +15,10 @@ English. Nothing else: no posts, no likes/comments/follows.
    (newspapers, trade press, company releases). Pick 4 different items, ideally from different countries/continents.
 4. Write automation/news-<date>.json (format in automation/news.py docstring): 4 items, short headline (max ~40 chars),
    1-3 facts each with a big number/word + one short line, source = outlet + date. 4 different accent colours.
+   Each item gets "flag_file": the exact Wikimedia Commons file name of the flag of the country the news is from
+   (e.g. "Flag_of_the_United_States.svg", "Flag_of_Germany.svg", "Flag_of_Canada_(Pantone).svg"). news.py downloads it
+   (cache: automation/flags/). If it prints "WARNING: flag not found", fix the file name and run again. Check every
+   story image: the flag must be the right country.
 5. Run: cd automation && python3 news.py news-<date>.json   (pip install pillow --break-system-packages if missing)
 6. Wednesday or Saturday only: python3 news_reel.py <date> <the 4 story file names in order>
 7. Look at the images; nothing may overflow (source line must be one line).

@@ -1,11 +1,11 @@
 """Build a 9:16 news reel from the day's story images.
 Usage: python3 news_reel.py <date> news-a-story.jpg news-b-story.jpg ...   (files in ../media/<date>/)
-Output: ../media/<date>/news-reel.mp4 (3.5 s per story, music from ../music if present)"""
+Output: ../media/<date>/news-reel.mp4 (5.5 s per story, music from ../music if present)"""
 import glob, os, subprocess, sys
 date, files = sys.argv[1], sys.argv[2:]
 here = os.path.dirname(os.path.abspath(__file__)); root = os.path.dirname(here)
 d = os.path.join(root, "media", date); frames = [os.path.join(d, f) for f in files]
-dur, fade = 3.5, 0.4
+dur, fade = 5.5, 0.4  # Lars 26.11.: 2 s longer per story, so the text can be read
 total = len(frames) * dur - (len(frames) - 1) * fade
 tracks = sorted(glob.glob(os.path.join(root, "music", "*.mp3")) + glob.glob(os.path.join(root, "music", "*.m4a")))
 music = "/tmp/news_music.m4a"

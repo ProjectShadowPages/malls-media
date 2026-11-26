@@ -18,7 +18,6 @@ Facts here are leads only: always verify on the web before posting.
 - New South China Mall (Dongguan, China) – for years called the world's emptiest mega mall (Venice canals, Paris zone).
 - New World Mall (Bangkok, Thailand) – abandoned mall whose flooded basement filled with fish (check current status).
 - King of Prussia Mall (Pennsylvania, USA) – so big that regulars say they still haven't seen everything.
-- NorthPark Center (Dallas, USA) – art collection inside a mall.
 
 ## Niche research 25.11.2026 (public web only, no scraping)
 Who is big in our niche and what they do:

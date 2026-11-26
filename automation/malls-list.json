@@ -265,6 +265,11 @@
       "name": "Villaggio Mall",
       "city": "Doha",
       "country": "Qatar"
+    },
+    {
+      "name": "NorthPark Center",
+      "city": "Dallas",
+      "country": "USA"
     }
   ]
 }

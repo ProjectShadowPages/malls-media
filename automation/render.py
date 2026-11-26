@@ -88,6 +88,17 @@ def flag(kind, w=300, h=200):
         pts += [(0, h)]; d.polygon(pts, fill=WHITE)
     elif kind == "poland":
         d.rectangle([0, h/2, w, h], fill=(220, 20, 60))
+    elif kind == "usa":  # 13 stripes, blue canton (7 stripes high, 2/5 wide) with 50 stars (rows of 6 and 5)
+        red, blue = (178, 34, 52), (60, 59, 110)
+        for i in range(0, 13, 2): d.rectangle([0, i*h/13, w, (i+1)*h/13], fill=red)
+        cw, ch = w * 0.4, h * 7 / 13; d.rectangle([0, 0, cw, ch], fill=blue)
+        r = ch * 0.045
+        for row in range(9):
+            n = 6 if row % 2 == 0 else 5
+            for col in range(n):
+                x = cw * ((2*col + 1) / 12 if n == 6 else (2*col + 2) / 12)
+                y = ch * (row + 1) / 10
+                star(d, x, y, r, WHITE)
     return im
 
 # ---------- icons (white line art in a box) ----------

@@ -1,0 +1,75 @@
+{
+  "date": "2026-11-27",
+  "slug": "northpark",
+  "name": "NorthPark Center",
+  "city": "Dallas",
+  "country": "USA",
+  "flag": "usa",
+  "accent": [
+    150,
+    110,
+    220
+  ],
+  "icon": "gem",
+  "cover": [
+    "THIS DALLAS",
+    "MALL IS ALSO",
+    "*AN ART MUSEUM"
+  ],
+  "slides": [
+    [
+      "QUICK FACTS",
+      "NorthPark Center at a glance",
+      [
+        "Opened in 1965 in Dallas, Texas",
+        "2,350,000 sq ft, 2nd-largest in Texas",
+        "Over 27 million visitors a year",
+        "It began on a cotton field →"
+      ]
+    ],
+    [
+      "THE COTTON FIELD",
+      "From cotton field to mall",
+      [
+        "Developer Raymond Nasher leased a 97-acre cotton field on the edge of Dallas. The plan: no parking space more than 350 feet from the mall.",
+        "Then came the art →"
+      ]
+    ],
+    [
+      "THE ART",
+      "A Warhol between the shops",
+      [
+        "Andy Warhol silkscreens line one corridor. Jonathan Borofsky's Five Hammering Men stand in the South Court.",
+        "One piece is two stories tall →"
+      ]
+    ],
+    [
+      "AD ASTRA",
+      "They had zero modern sculptures",
+      [
+        "Mark di Suvero's Ad Astra, two stories tall, fills the atrium by the food court. Yet when NorthPark opened, the Nashers didn't own one modern sculpture.",
+        "Not just art inside →"
+      ]
+    ],
+    [
+      "CENTERPARK",
+      "A park and a library inside",
+      [
+        "CenterPark is a 1.4-acre garden with live oaks. Bookmarks was the first children's library in the US inside a shopping center."
+      ]
+    ]
+  ],
+  "photo": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/3/38/NorthPark_Center_March_2017_2.jpg",
+    "credit": "Photo: Michael Barera / Wikimedia Commons, CC BY-SA 4.0"
+  },
+  "caption": "The Dallas mall that's also an art museum 🇺🇸\n\nIn 1965 Raymond Nasher opened NorthPark Center on a former cotton field. Today Andy Warhol silkscreens line one corridor and Jonathan Borofsky's Five Hammering Men stand in the South Court. Over 27 million people visit every year.\n\nWhat would you look at first, the art or the shops? 👇\n\n#mallsoftheworld #northparkcenter #dallas #texas #mallart",
+  "address": "NorthPark Center\n8687 North Central Expressway, Dallas, Texas, USA",
+  "sources": [
+    "https://en.wikipedia.org/wiki/NorthPark_Center",
+    "https://tclf.org/northpark-center",
+    "https://kera.org/?p=354862",
+    "https://northparkcenter.com/pages/history",
+    "https://commons.wikimedia.org/wiki/File:NorthPark_Center_March_2017_2.jpg"
+  ]
+}

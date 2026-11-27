@@ -201,6 +201,11 @@ def photo_slide(m, idx, n, photo, kicker, line, credit):
     footer(d, idx, n, m["accent"]); return im
 
 def cover_slide(m, n, photo, lines, credit):
+    if m.get("layout") in ("band", "split"):
+        return cover_top(m, n, photo, lines, credit)
+    return cover_classic(m, n, photo, lines, credit)
+
+def cover_classic(m, n, photo, lines, credit):
     """Photo cover: full-bleed photo, dark gradient, big headline (line starting with * = yellow)."""
     im = Image.open(photo).convert("RGB")
     r = max(W / im.width, H / im.height); im = im.resize((int(im.width * r) + 1, int(im.height * r) + 1))
@@ -238,6 +243,12 @@ def cover_slide(m, n, photo, lines, credit):
     return im
 
 def content_slide(m, idx, n, kicker, head, body):
+    v = m.get("layout", "classic")
+    if v != "classic" and VARIANTS.get(v):
+        return VARIANTS[v](m, idx, n, kicker, head, body)
+    return content_classic(m, idx, n, kicker, head, body)
+
+def content_classic(m, idx, n, kicker, head, body):
     im = Image.new("RGB", (W, H), (0, 0, 0)); d = ImageDraw.Draw(im)
     fl = flag(m["flag"], 138, 92); im.paste(fl, (W - M - 138, 86))
     d.rectangle([W - M - 139, 85, W - M, 178], outline=WHITE, width=1)
@@ -275,3 +286,122 @@ def end_slide(m, n):
         d.text(((W - d.textlength(l, font=f2))/2, y), l, font=f2, fill=WHITE); y += 66
     footer(d, n, n, m["accent"]); return im
 
+
+
+# ---------- layout variants (Lars 27.11.: no identical template every day) ----------
+# Rotated by date in build.py: classic, band, number, split. Logo, flag, colours and fonts stay the same.
+import re as _re
+YEL = (255, 214, 0)
+
+def _body(d, body, y, x, maxw, accent, size=48):
+    bf = font("Medium", size)
+    bullet = len([p for p in body if not p.rstrip().endswith("\u2192")]) > 1
+    for para in body:
+        if para.rstrip().endswith("\u2192"):
+            tf = font("Bold", size - 2); y += 10
+            for l in wrap(d, para, tf, maxw):
+                d.text((x, y), l, font=tf, fill=accent); y += int(size * 1.3)
+            continue
+        for j, l in enumerate(wrap(d, para, bf, maxw - (50 if bullet else 0))):
+            if bullet and j == 0: d.ellipse([x, y + 24, x + 16, y + 40], fill=accent)
+            d.text((x + (50 if bullet else 0), y), l, font=bf, fill=WHITE); y += int(size * 1.375)
+        y += 30
+    return y
+
+def content_band(m, idx, n, kicker, head, body):
+    """Accent band at the top with the kicker, headline below, body text."""
+    im = Image.new("RGB", (W, H), (0, 0, 0)); d = ImageDraw.Draw(im)
+    acc = m["accent"]; d.rectangle([0, 0, W, 200], fill=acc)
+    dark = (0, 0, 0) if sum(acc) > 380 else WHITE
+    d.text((M, 78), kicker, font=font("ExtraBold", 44), fill=dark)
+    fl = flag(m["flag"], 120, 80); im.paste(fl, (W - M - 120, 60))
+    d.rectangle([W - M - 121, 59, W - M, 140], outline=dark, width=2)
+    y = 270; hf = font("ExtraBold", 76)
+    for l in wrap(d, head, hf, W - 2*M):
+        d.text((M, y), l, font=hf, fill=WHITE); y += 90
+    y += 50
+    _body(d, body, y, M, W - 2*M, acc)
+    f = font("Medium", 30); d.text((M, H - 100), "@malls_oftheworld", font=f, fill=WHITE)
+    t = f"{idx}/{n}"; d.text((W - M - d.textlength(t, font=f), H - 100), t, font=f, fill=WHITE)
+    return im
+
+def content_number(m, idx, n, kicker, head, body):
+    """If the headline contains a number, show it huge (key-figure slide); otherwise centred layout."""
+    im = Image.new("RGB", (W, H), (0, 0, 0)); d = ImageDraw.Draw(im); acc = m["accent"]
+    fl = flag(m["flag"], 138, 92); im.paste(fl, (W - M - 138, 86))
+    d.rectangle([W - M - 139, 85, W - M, 178], outline=WHITE, width=1)
+    d.text((M, 108), kicker, font=font("Bold", 38), fill=acc)
+    rx = r"\d[\d,.]*\d(?:[\s-]*(?:m\u00b2|%|km|sq ft|million|billion|feet|acres?))?|\d+[\s-]*(?:m\u00b2|%|km|sq ft|million|billion|feet|acres?)"
+    mt = _re.search(rx, head)
+    src = head if mt else None
+    if not mt:
+        for para in body:
+            mt = _re.search(rx, para)
+            if mt and not para.rstrip().endswith("\u2192"): src = para; break
+            mt = None
+    y = 250
+    if mt:
+        num = mt.group(0).strip(); size = 220
+        while size > 110 and d.textlength(num, font=font("ExtraBold", size)) > W - 2*M: size -= 10
+        d.text((M - 6, y), num, font=font("ExtraBold", size), fill=acc); y += int(size * 1.12)
+        hf = font("ExtraBold", 60)
+        for l in wrap(d, head, hf, W - 2*M)[:3]:
+            d.text((M, y), l, font=hf, fill=WHITE); y += 72
+    else:
+        hf = font("ExtraBold", 84)
+        for l in wrap(d, head, hf, W - 2*M):
+            d.text((M, y), l, font=hf, fill=WHITE); y += 98
+    y += 40; d.rectangle([M, y, W - M, y + 3], fill=(70, 70, 70)); y += 50
+    _body(d, body, y, M, W - 2*M, acc, 46)
+    footer(d, idx, n, acc); return im
+
+def content_split(m, idx, n, kicker, head, body):
+    """Vertical accent bar on the left, text block indented, big slide number as watermark."""
+    im = Image.new("RGB", (W, H), (12, 12, 12)); d = ImageDraw.Draw(im); acc = m["accent"]
+    d.rectangle([0, 0, 28, H], fill=acc)
+    bigf = font("ExtraBold", 420); t = f"{idx:02d}"
+    d.text((W - 40 - d.textlength(t, font=bigf), H - 560), t, font=bigf, fill=(32, 32, 32))
+    x = M + 30; mw = W - x - M
+    fl = flag(m["flag"], 120, 80); im.paste(fl, (x, 90)); d.rectangle([x - 1, 89, x + 120, 170], outline=WHITE, width=1)
+    d.text((x + 150, 110), kicker, font=font("Bold", 38), fill=acc)
+    y = 250; hf = font("ExtraBold", 78)
+    for l in wrap(d, head, hf, mw):
+        d.text((x, y), l, font=hf, fill=WHITE); y += 92
+    y += 50
+    _body(d, body, y, x, mw, acc)
+    f = font("Medium", 30); d.text((x, H - 100), "@malls_oftheworld", font=f, fill=WHITE)
+    return im
+
+def cover_top(m, n, photo, lines, credit):
+    """Photo cover with the headline at the TOP (dark gradient from top), logo + flag at the bottom."""
+    im = Image.open(photo).convert("RGB")
+    r = max(W / im.width, H / im.height); im = im.resize((int(im.width * r) + 1, int(im.height * r) + 1))
+    x0 = (im.width - W) // 2; y0 = max(0, (im.height - H) // 2)
+    im = im.crop((x0, y0, x0 + W, y0 + H)); black = Image.new("RGB", (W, H), (0, 0, 0))
+    g = Image.new("L", (1, H))
+    for y in range(H): g.putpixel((0, y), int(235 * min(1, max(0, (H * 0.62 - y) / (H * 0.42)))))
+    im = Image.composite(black, im, g.resize((W, H)))
+    b = Image.new("L", (1, H))
+    for y in range(H): b.putpixel((0, y), int(200 * max(0, (y - (H - 300)) / 300)))
+    im = Image.composite(black, im, b.resize((W, H)))
+    d = ImageDraw.Draw(im)
+    clean = [l.lstrip("*") for l in lines][:4]; size = 108
+    while size > 60 and max(d.textlength(l, font=font("ExtraBold", size)) for l in clean) > W - 132: size -= 4
+    f = font("ExtraBold", size); lh = int(size * 1.09); y = 110
+    d.text((70, y), "MALL OF THE DAY", font=font("ExtraBold", 40), fill=m["accent"]); y += 70
+    for raw, l in zip(lines, clean):
+        d.text((66, y), l, font=f, fill=YEL if raw.startswith("*") else WHITE); y += lh
+    sub = f"{m['name']} \u00b7 {m['city']}, {m['country']}"; sf = font("Medium", 40)
+    if d.textlength(sub, font=sf) > W - 140: sub = f"{m['name']} \u00b7 {m['country']}"
+    d.text((70, y + 16), sub, font=sf, fill=(230, 230, 230))
+    logo = Image.open(os.path.join(BASE, "logo.png")).convert("RGB").resize((200, 200))
+    mk = Image.new("L", (200, 200), 0); ImageDraw.Draw(mk).ellipse((0, 0, 199, 199), fill=255)
+    im.paste(logo, (55, H - 260), mk)
+    fl = flag(m["flag"], 150, 100); im.paste(fl, (285, H - 210))
+    if credit: d.text((470, H - 150), credit[:60], font=font("Medium", 22), fill=(190, 190, 190))
+    s = font("ExtraBold", 34); t = "SWIPE  \u2192"
+    d.text((W - 70 - d.textlength(t, font=s), H - 90), t, font=s, fill=WHITE)
+    return im
+
+VARIANTS = {"band": content_band, "number": content_number, "split": content_split}
+LAYOUTS = ["classic", "band", "number", "split"]

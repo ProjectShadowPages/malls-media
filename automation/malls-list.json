@@ -270,6 +270,11 @@
       "name": "NorthPark Center",
       "city": "Dallas",
       "country": "USA"
+    },
+    {
+      "name": "Jewel Changi Airport",
+      "city": "Singapore",
+      "country": "Singapore"
     }
   ]
 }

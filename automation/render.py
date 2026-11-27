@@ -9,6 +9,9 @@ BASE = os.path.dirname(os.path.abspath(__file__))
 F = os.path.join(BASE, "fonts") + "/"
 def font(w, s): return ImageFont.truetype(F + f"Inter-{w}.otf", s)
 
+def place(m):  # "City, Country"; city-states (Singapore) only once
+    return m['country'] if m['city'] == m['country'] else f"{m['city']}, {m['country']}"
+
 # ---------- flags ----------
 def star(d, cx, cy, r, fill, rot=-90):
     pts = []
@@ -86,6 +89,16 @@ def flag(kind, w=300, h=200):
         for i in range(9):
             pts += [(b, (i + 0.5) * h / 9), (a, (i + 1) * h / 9)]
         pts += [(0, h)]; d.polygon(pts, fill=WHITE)
+    elif kind == "singapore":  # red over white; white crescent + 5 stars (pentagon) in the upper hoist
+        red = (239, 51, 64); d.rectangle([0, 0, w, h/2], fill=red)
+        cx, cy, r = h*0.30, h*0.25, h*0.19
+        d.ellipse([cx - r, cy - r, cx + r, cy + r], fill=WHITE)
+        cx2, r2 = cx + h*0.065, h*0.175
+        d.ellipse([cx2 - r2, cy - r2, cx2 + r2, cy + r2], fill=red)
+        px, py, pr = h*0.47, h*0.255, h*0.085
+        for k in range(5):
+            a = math.radians(-90 + k * 72)
+            star(d, px + pr*math.cos(a), py + pr*math.sin(a), h*0.036, WHITE)
     elif kind == "poland":
         d.rectangle([0, h/2, w, h], fill=(220, 20, 60))
     elif kind == "usa":  # 13 stripes, blue canton (7 stripes high, 2/5 wide) with 50 stars (rows of 6 and 5)
@@ -178,7 +191,7 @@ def title_slide(m, n):
     for l in lines:
         d.text(((W - d.textlength(l, font=f))/2, y), l, font=f, fill=WHITE); y += int(size * 1.12)
     y += 20; d.rectangle([W/2 - 90, y, W/2 + 90, y + 8], fill=m["accent"]); y += 40
-    f2 = font("SemiBold", 52); t = f"{m['city']}, {m['country']}"
+    f2 = font("SemiBold", 52); t = place(m)
     d.text(((W - d.textlength(t, font=f2))/2, y), t, font=f2, fill=WHITE)
     footer(d, 1, n, m["accent"]); return im
 
@@ -227,11 +240,11 @@ def cover_classic(m, n, photo, lines, credit):
     size = 112
     while size > 60 and max(d.textlength(l, font=font("ExtraBold", size)) for l in clean) > W - 132: size -= 4
     f = font("ExtraBold", size); lh = int(size * 1.09)
-    sub = f"{m['name']} \u00b7 {m['city']}, {m['country']}"; sf = font("Medium", 40)
+    sub = f"{m['name']} \u00b7 {place(m)}"; sf = font("Medium", 40)
     while d.textlength(sub, font=sf) > W - 140: sub = f"{m['name']} \u00b7 {m['country']}"; break
     y_end = H - 150 - (30 if credit else 0)
     y = y_end - 70 - lh * len(clean)
-    d.text((70, y - 60), "MALL OF THE DAY", font=font("ExtraBold", 40), fill=m["accent"])
+    d.text((70, y - 60), "MALL OF THE DAY", font=font("ExtraBold", 40), fill=m["accent"], stroke_width=3, stroke_fill=(0, 0, 0))  # stroke: readable on busy photos (check 28.11.)
     for raw, l in zip(lines, clean):
         d.text((66, y), l, font=f, fill=YEL if raw.startswith("*") else WHITE); y += lh
     d.text((70, y + 16), sub, font=sf, fill=(230, 230, 230))
@@ -391,7 +404,7 @@ def cover_top(m, n, photo, lines, credit):
     d.text((70, y), "MALL OF THE DAY", font=font("ExtraBold", 40), fill=m["accent"]); y += 70
     for raw, l in zip(lines, clean):
         d.text((66, y), l, font=f, fill=YEL if raw.startswith("*") else WHITE); y += lh
-    sub = f"{m['name']} \u00b7 {m['city']}, {m['country']}"; sf = font("Medium", 40)
+    sub = f"{m['name']} \u00b7 {place(m)}"; sf = font("Medium", 40)
     if d.textlength(sub, font=sf) > W - 140: sub = f"{m['name']} \u00b7 {m['country']}"
     d.text((70, y + 16), sub, font=sf, fill=(230, 230, 230))
     logo = Image.open(os.path.join(BASE, "logo.png")).convert("RGB").resize((200, 200))

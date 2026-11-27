@@ -1,0 +1,75 @@
+{
+  "date": "2026-11-28",
+  "slug": "jewel",
+  "name": "Jewel Changi Airport",
+  "city": "Singapore",
+  "country": "Singapore",
+  "flag": "singapore",
+  "accent": [
+    0,
+    180,
+    170
+  ],
+  "icon": "wave",
+  "cover": [
+    "THE WORLD'S",
+    "TALLEST INDOOR",
+    "*WATERFALL",
+    "IS IN A MALL"
+  ],
+  "slides": [
+    [
+      "QUICK FACTS",
+      "Jewel Changi Airport at a glance",
+      [
+        "Opened in 2019 at Changi Airport",
+        "About 300 shops and restaurants",
+        "50 million visitors in 6 months",
+        "And it rains indoors →"
+      ]
+    ],
+    [
+      "THE RAIN VORTEX",
+      "It rains indoors here",
+      [
+        "The HSBC Rain Vortex falls 40 metres from a hole in the glass roof: the world's tallest indoor waterfall, up to 37,850 litres a minute.",
+        "At night it gets a show →"
+      ]
+    ],
+    [
+      "AFTER DARK",
+      "The waterfall becomes a screen",
+      [
+        "In the evening a 360-degree light and sound show is projected onto the falling water.",
+        "Around it grows a forest →"
+      ]
+    ],
+    [
+      "FOREST VALLEY",
+      "A forest five storeys high",
+      [
+        "The Shiseido Forest Valley climbs five storeys around the shops, with around 3,000 trees and 60,000 shrubs.",
+        "Up top, you walk on nets →"
+      ]
+    ],
+    [
+      "CANOPY PARK",
+      "A bouncing net under the roof",
+      [
+        "Canopy Park has Singapore's largest hedge maze and a 250-metre Bouncing Net. The Canopy Bridge, glass-floored in the middle, hangs 23 metres above the ground."
+      ]
+    ]
+  ],
+  "photo": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/f/f7/At_Jewel_Changi%2C_Singapore_2023_36.jpg",
+    "credit": "Photo: Mike Peel / Wikimedia Commons, CC BY-SA 4.0"
+  },
+  "caption": "The Singapore airport mall with the world's tallest indoor waterfall 🇸🇬\n\nAt Jewel Changi Airport the HSBC Rain Vortex drops 40 metres through a hole in the glass roof. Around it rise a five-storey forest and about 300 shops and restaurants. After dark the water becomes a light show.\n\nWould you get to the airport early just for this? 👇\n\n#mallsoftheworld #jewelchangi #singapore #changiairport #indoorwaterfall",
+  "address": "Jewel Changi Airport\n78 Airport Boulevard, Singapore 819666",
+  "sources": [
+    "https://en.wikipedia.org/wiki/Jewel_Changi_Airport",
+    "https://www.dezeen.com/2019/03/12/moshe-safdie-worlds-tallest-indoor-waterfall-changi-airport/",
+    "https://www.changiairport.com/corporate/media-centre/changijourneys/the-airport-never-sleeps/behind-the-rain-vortex.html",
+    "https://commons.wikimedia.org/wiki/File:At_Jewel_Changi,_Singapore_2023_36.jpg"
+  ]
+}

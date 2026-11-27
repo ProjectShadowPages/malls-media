@@ -43,3 +43,7 @@ Read this together with RUN.md / RUN-news.md. German master copy: concept doc "S
 
 ## Carousel layouts
 - Since 28.11.: 4 rotating layouts (classic, band, number, split) chosen by date in build.py; logo, flag, colours, fonts unchanged. Reason: the same template every day may cost reach (originality). Template for new SPs: build 3-4 layout variants from day one.
+
+## Concept doc maintenance (Lars 27.11.)
+- Every change to the concept doc: bump the version, set the "Stand" date at the top to today, AND check that the
+  "Status (...)" line in "Kurzfassung" and the "Stand:" date of the To-Do list still match today; tick finished To-Do items.

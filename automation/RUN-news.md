@@ -1,5 +1,7 @@
 # Daily news run – Malls Worldwide (@malls_oftheworld)
 
+Read automation/LEARNINGS.md first (current restrictions and rules).
+
 Goal: 4 mall-news STORIES (images) on Instagram + Facebook one every 6 hours: 03:00, 09:00, 15:00 and 21:00 (Europe/Berlin) of the
 target date (Lars 24.11.: reach all time zones). On WEDNESDAYS and SATURDAYS additionally ONE news REEL at 21:30 built from
 these 4 stories (or the best recent ones).

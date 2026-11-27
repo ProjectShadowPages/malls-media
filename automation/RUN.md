@@ -1,5 +1,7 @@
 # Daily mall run – Malls Worldwide (@malls_oftheworld)
 
+Read automation/LEARNINGS.md first (current restrictions and rules).
+
 Goal: create ONE mall carousel (7 slides) + ONE "new post" story + ONE reel for the target date and schedule them in Metricool.
 Times vary a little each day (build.py prints them under "times": post 14:30-15:30, story +5 min, reel +60 min). Everything in English.
 Never post anything else. Never like, follow or comment.

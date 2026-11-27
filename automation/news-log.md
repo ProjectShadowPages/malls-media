@@ -21,3 +21,7 @@
 - 2026-11-26 | 650,000 balloons fill Russian malls (Park House) | https://www.malls.ru/rus/news/650-tysyach-vozdushnykh-sharov-atriumy-seti-park-khaus-prevratilis-v-masshtabnye-art-ekspozitsii.shtml
 - 2026-11-26 | Jacksonville malls open early Black Friday | https://www.news4jax.com/news/local/2026/11/25/heres-a-list-of-when-northeast-florida-malls-major-stores-will-open/
 - 2026-11-26 | Canadians trim holiday budgets (RCC $911, -6.5%) | https://retail-insider.com/retail-insider/2026/11/daily-synopsis-november-23-2026/
+- 2026-11-27 | Mall of America attempts a world record (Black Friday) | https://www.cbsnews.com/minnesota/news/mall-of-america-minnesota-black-friday-2026/
+- 2026-11-27 | Auchan opens hypermarket in Sun Plaza (Bucharest) | https://www.romania-insider.com/business/auchan-opens-two-stores-same-day-auchan-hypermarket
+- 2026-11-27 | Sydney's QVB tops Black Friday list (Pathzz) | https://www.commercialrealestate.com.au/news/australia-top-black-friday-shopping-hotspots-1585781/
+- 2026-11-27 | Flea Flicker opens in ex-Macy's, Wyoming Valley Mall | https://www.timesleader.com/news/1766567/wyoming-valley-mall-opens-early-for-black-friday-new-anchor-debuts-thanksgiving-night

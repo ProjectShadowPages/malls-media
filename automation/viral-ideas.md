@@ -63,3 +63,10 @@ Who is big in our niche and what they do:
 - Collaborations (later, after the Instagram action pause): Instagram collab posts with travel/architecture creators or mall accounts (both accounts publish it). 1-2 per month. Needs Lars' contact and OK.
 - Track per post: shares and follows (Instagram's new Insights: Home/Performance/Content/Audience) - already in the weekly report.
 - Later / money (only when Impressum and monetisation are decided): Amazon affiliate links in IG posts, Instagram long videos (up to 90 min) monetisation - fits the "real videos" idea.
+
+## Tips @instacoachmike 27.11.2026
+- Same template many posts in a row costs reach (originality/recency signals). Proposal to Lars (open): 3-4 rotating carousel layouts (same logo/colours) + the new formats.
+- Never repost a winner; keep the angle, change the format. Deleting and reposting a flop does not help (matches our no-duplicate rule).
+- Editing outside Instagram is fine; only foreign watermarks hurt (we have none).
+- Audio of a published reel can be swapped in the app (likes stay) - fallback for IG library music after the action pause.
+- Not adopted: third-party AI tool "Growy".

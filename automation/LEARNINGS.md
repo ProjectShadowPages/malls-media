@@ -51,3 +51,6 @@ Read this together with RUN.md / RUN-news.md. German master copy: concept doc "S
 ## vidIQ (connected 27.11.)
 - Free plan: 150 credits/month (resets ~27th). Use sparingly, mainly in the weekly report (outliers, trends, keyword research).
 - READ-ONLY research only. Never use vidIQ to publish (instagram_publish_reel, social_post_publish), reply to comments, update videos or connect our Instagram account - publishing stays in Metricool, interactions stay manual (Lars).
+
+## Trial reels need followers (27.11.)
+- Instagram rejects TRIAL_REEL until the account has enough followers (200 for professional accounts per Metricool help EN, 1,000 per Metricool help DE/Publer) and the feature is enabled. Until then: post test formats as normal REELs. Ignore Metricool's "time to publish manually" mail after such a failure.

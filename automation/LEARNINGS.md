@@ -40,3 +40,6 @@ Read this together with RUN.md / RUN-news.md. German master copy: concept doc "S
 4. Tag official accounts only if linked on the official website or confirmed by the owner (handle list per SP).
 5. Trial reels only with new content.
 6. Daily evening preview to the owner; short task list 50 min before the post.
+
+## Carousel layouts
+- Since 28.11.: 4 rotating layouts (classic, band, number, split) chosen by date in build.py; logo, flag, colours, fonts unchanged. Reason: the same template every day may cost reach (originality). Template for new SPs: build 3-4 layout variants from day one.

@@ -2,6 +2,8 @@
 
 Read automation/LEARNINGS.md first (current restrictions and rules).
 
+LAYOUT ROTATION (Lars 27.11.): build.py picks one of 4 carousel layouts by date (classic, band, number, split). Same content rules for all. In the 'number' layout the first number of the headline or body is shown huge - make sure each content slide has one true, meaningful figure where possible. Check slide 1 and two content slides visually as usual.
+
 Goal: create ONE mall carousel (7 slides) + ONE "new post" story + ONE reel for the target date and schedule them in Metricool.
 Times vary a little each day (build.py prints them under "times": post 14:30-15:30, story +5 min, reel +60 min). Everything in English.
 Never post anything else. Never like, follow or comment.

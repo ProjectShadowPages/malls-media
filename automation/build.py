@@ -48,7 +48,7 @@ def fetch_commons(url, dest):
 m = json.load(open(sys.argv[1]))
 m["accent"] = tuple(m["accent"])
 # Layout rotation (Lars 27.11.): a different carousel layout each day, cycle of 4; "layout" in the JSON overrides
-ROTATE_LAYOUTS = False  # switch to True after Lars approves the preview
+ROTATE_LAYOUTS = True  # approved by Lars 27.11.
 if "layout" not in m and ROTATE_LAYOUTS:
     import datetime as _dt
     m["layout"] = render.LAYOUTS[_dt.date.fromisoformat(m["date"]).toordinal() % len(render.LAYOUTS)]

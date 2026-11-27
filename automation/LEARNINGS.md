@@ -47,3 +47,7 @@ Read this together with RUN.md / RUN-news.md. German master copy: concept doc "S
 ## Concept doc maintenance (Lars 27.11.)
 - Every change to the concept doc: bump the version, set the "Stand" date at the top to today, AND check that the
   "Status (...)" line in "Kurzfassung" and the "Stand:" date of the To-Do list still match today; tick finished To-Do items.
+
+## vidIQ (connected 27.11.)
+- Free plan: 150 credits/month (resets ~27th). Use sparingly, mainly in the weekly report (outliers, trends, keyword research).
+- READ-ONLY research only. Never use vidIQ to publish (instagram_publish_reel, social_post_publish), reply to comments, update videos or connect our Instagram account - publishing stays in Metricool, interactions stay manual (Lars).

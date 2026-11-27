@@ -55,3 +55,11 @@ Who is big in our niche and what they do:
 - Reel: "3 malls with things you'd never expect inside".
 - "Fact check: is this really a mall?" - viral mall clips that are actually elsewhere (original, high trust).
 - "Then vs. now" for dead malls (only with free/licensed photos).
+
+## Ideas from tips 27.11.2026 (not yet decided, Lars to approve)
+- "Swipe to reveal" carousel: slide 1 = mall photo heavily pixelated + question ("Guess the country?"), each slide sharper, last slide sharp + answer. Same idea as trial reel 2 (guessing), as a carousel. True, no comment call to action.
+- "Swipe to zoom" carousel: one striking mall photo, each slide zooms closer to a surprising detail (e.g. the aquarium shark, a painted sky) - detail revealed and explained on the last slide.
+- "Seamless / panorama" carousel: one wide interior photo split across slides so swiping feels like walking through the mall.
+- Collaborations (later, after the Instagram action pause): Instagram collab posts with travel/architecture creators or mall accounts (both accounts publish it). 1-2 per month. Needs Lars' contact and OK.
+- Track per post: shares and follows (Instagram's new Insights: Home/Performance/Content/Audience) - already in the weekly report.
+- Later / money (only when Impressum and monetisation are decided): Amazon affiliate links in IG posts, Instagram long videos (up to 90 min) monetisation - fits the "real videos" idea.

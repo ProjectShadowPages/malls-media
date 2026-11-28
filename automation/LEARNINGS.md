@@ -54,3 +54,15 @@ Read this together with RUN.md / RUN-news.md. German master copy: concept doc "S
 
 ## Trial reels need followers (27.11.)
 - Instagram rejects TRIAL_REEL until the account has enough followers (200 for professional accounts per Metricool help EN, 1,000 per Metricool help DE/Publer) and the feature is enabled. Until then: post test formats as normal REELs. Ignore Metricool's "time to publish manually" mail after such a failure.
+
+## Instagram bot check 28.11. + new account ramp-up
+- 28.11.2026 ~04:20: Instagram hid @malls_oftheworld: "Weise nach, dass du kein Bot bist" (account integrity, 180 days to verify).
+  Not a content violation. Cause almost certainly volume: one-week-old account, 8-9 automated IG items/day
+  (carousel, 2 stories, reel, 4 news stories, news reel, extra reels). Warnings before: action restrictions from 26.11.
+- Lars appealed in the app. Rules while waiting: ONE appeal only, no new account (ban evasion), log in only from his usual phone,
+  verify only inside the app (not via e-mail links). Instagram's Metricool audio lookup fails while IG is blocked (Authorization Error).
+- All IG posts of 28./29.11. removed from Metricool (FB/others kept); Düsseldorf + Guess reels kept as drafts (Düsseldorf lost
+  its audioConfiguration: re-add audioId 622819303274042, videoVolume 0 when rescheduling).
+- Control file: automation/ig-mode.md (PAUSED / SLOW / NORMAL).
+- New account ramp-up (every SP): first 2-3 weeks max 1 post + 1 reel per day per Instagram account, no news stories,
+  no extra reels, no manual bulk actions; increase slowly only without warnings. Facebook page judged separately.

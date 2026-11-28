@@ -1,5 +1,8 @@
 # Daily mall run – Malls Worldwide (@malls_oftheworld)
 
+**FIRST read automation/ig-mode.md (Instagram MODE: PAUSED / SLOW / NORMAL) and follow it - it overrides every Instagram step below.**
+
+
 Read automation/LEARNINGS.md first (current restrictions and rules).
 
 LAYOUT ROTATION (Lars 27.11.): build.py picks one of 4 carousel layouts by date (classic, band, number, split). Same content rules for all. In the 'number' layout the first number of the headline or body is shown huge - make sure each content slide has one true, meaningful figure where possible. Check slide 1 and two content slides visually as usual.

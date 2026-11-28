@@ -1,5 +1,8 @@
 # Daily news run – Malls Worldwide (@malls_oftheworld)
 
+**FIRST read automation/ig-mode.md (Instagram MODE: PAUSED / SLOW / NORMAL) and follow it - it overrides every Instagram step below.**
+
+
 Read automation/LEARNINGS.md first (current restrictions and rules).
 
 Goal: 4 mall-news STORIES (images) on Instagram + Facebook one every 6 hours: 03:00, 09:00, 15:00 and 21:00 (Europe/Berlin) of the

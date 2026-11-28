@@ -27,3 +27,4 @@
   automation/STOP.md created (all runs schedule nothing). News run + evening preview disabled; mall run trigger could not be
   disabled from chat (permission) -> STOP.md guards it. All Metricool posts of 28.11. set to draft (FB, Threads, Bluesky,
   Pinterest, YouTube). Next step: dispute at Appeals Centre Europe (text in automation/appeal-ace.md).
+2026-11-29 STOPPED (automation/STOP.md)

@@ -1,6 +1,6 @@
 # Instagram mode (single source of truth for all runs)
 
-MODE: PAUSED
+MODE: DISABLED (account permanently disabled 28.11.2026 04:52; see STOP.md)
 
 Read by RUN.md and RUN-news.md before step 1. Only Claude in Lars's chat changes this line, after Lars confirms.
 

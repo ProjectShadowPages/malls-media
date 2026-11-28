@@ -1,5 +1,7 @@
 # Daily news run – Malls Worldwide (@malls_oftheworld)
 
+**STOP CHECK: if automation/STOP.md exists, do exactly what it says (schedule nothing, log, end). This comes before everything else.**
+
 **FIRST read automation/ig-mode.md (Instagram MODE: PAUSED / SLOW / NORMAL) and follow it - it overrides every Instagram step below.**
 
 

@@ -23,3 +23,7 @@
   Metricool: IG removed from 28.11. posts (story 09:00, carousel 14:49 -> new id 445108065 FB only, story 14:54, news story 15:00,
   reel 15:49 -> 445108069, reel-story 15:54, story 21:00, news reel 21:30 -> 445108073). Düsseldorf reel 18:31 -> draft 445108199,
   Guess reel 29.11. -> draft 445108060. Facebook, Threads, Bluesky, Pinterest, YouTube unchanged.
+- 2026-11-28 05:12 CHAT: Instagram @malls_oftheworld PERMANENTLY DISABLED after appeal (mail 04:52). Lars: stop EVERYTHING.
+  automation/STOP.md created (all runs schedule nothing). News run + evening preview disabled; mall run trigger could not be
+  disabled from chat (permission) -> STOP.md guards it. All Metricool posts of 28.11. set to draft (FB, Threads, Bluesky,
+  Pinterest, YouTube). Next step: dispute at Appeals Centre Europe (text in automation/appeal-ace.md).

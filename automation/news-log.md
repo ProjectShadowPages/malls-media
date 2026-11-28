@@ -25,3 +25,7 @@
 - 2026-11-27 | Auchan opens hypermarket in Sun Plaza (Bucharest) | https://www.romania-insider.com/business/auchan-opens-two-stores-same-day-auchan-hypermarket
 - 2026-11-27 | Sydney's QVB tops Black Friday list (Pathzz) | https://www.commercialrealestate.com.au/news/australia-top-black-friday-shopping-hotspots-1585781/
 - 2026-11-27 | Flea Flicker opens in ex-Macy's, Wyoming Valley Mall | https://www.timesleader.com/news/1766567/wyoming-valley-mall-opens-early-for-black-friday-new-anchor-debuts-thanksgiving-night
+- 2026-11-28 | Apple's first Hyderabad store is coming (Lake Shore Mall, 10 Dec) | https://www.analyticsinsight.net/news/apple-expands-its-india-retail-presence-with-a-new-store-in-hyderabad
+- 2026-11-28 | BOSS opens its first Middle East café (Mall of the Emirates) | https://www.webwire.com/ViewPressRel.asp?aId=364636
+- 2026-11-28 | Primark opens at El Tormes centre (Salamanca, No. 69 in Spain) | https://www.adslzone.net/noticias/internet/primark-abre-tienda-el-tormes-salamanca/
+- 2026-11-28 | Black Friday packs St. Louis mall (West County Center) | https://www.yahoo.com/news/articles/shoppers-pack-st-louis-area-194422512.html

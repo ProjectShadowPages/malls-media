@@ -10,15 +10,17 @@ Reason given by Instagram: "Prove you're not a bot" (Community Standards on acco
 
 ## Text (English, paste into the form)
 
+Instagram did not name a specific policy beyond "Community Standards on account integrity" ("prove you're not a bot"). This option was not in the list, so I selected the closest one.
+
 I am asking for the review of the permanent disabling of my Instagram account @malls_oftheworld on 28 November 2026.
 
 What the account is: @malls_oftheworld is a small travel and architecture page that presents one shopping mall from around the world per day. Every post is our own work: a carousel with our own design and our own English texts (history, facts, figures), checked against sources. Photos come from Wikimedia Commons under Creative Commons licences and are credited by author and licence in every caption. We never reposted other creators' content, never used AI images of real places, never bought followers, and never used tools for automatic likes, comments or follows.
 
 Who runs it: I am a real person in Germany and the sole owner of the account. I created it in November 2026 and manage it myself. I use Metricool, an official Meta business partner, to schedule posts through Meta's official API. No unofficial apps or third-party login tools had access to the account.
 
-What I think went wrong: in the first week I scheduled too many items per day for such a new account (a carousel, a reel and several stories). I understand this pattern can look automated. When Instagram showed activity restrictions on 26 November, I stopped all manual actions immediately (no tagging, no commenting, no following). When Instagram asked me to prove I am not a bot on 28 November, I stopped all scheduled Instagram posts and appealed in the app. The account was then disabled within about 30 minutes, without the chance to complete an identity check.
+What I think went wrong: in the first week I scheduled too many items per day for such a new account (a carousel, a reel and several stories). I understand this pattern can look automated. When Instagram showed activity restrictions on 26 November, I stopped all manual actions immediately (no tagging, no commenting, no following). When Instagram asked me to prove I am not a bot on 28 November, I completed the identity check in the app, appealed, and stopped all scheduled Instagram posts. Despite the completed identity check, the account was permanently disabled within about 30 minutes.
 
-I believe the account does not break the Community Standards: the content is original, informative and credited, and the account is operated by a real person. I am willing to verify my identity and to post at a much lower frequency (at most one post per day) if the account is restored.
+I believe the account does not break the Community Standards: the content is original, informative and credited, and the account is operated by a real person. I have already verified my identity and I am willing to post at a much lower frequency (at most one post per day) if the account is restored.
 
 I ask for the decision to be reviewed and the account to be restored.
 
